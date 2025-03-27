@@ -17,7 +17,7 @@ export function Navbar(){
                     <ul className="flex gap-3 justify-end">
                         <li className='hover:text-black transition'><a href="#about">About</a></li>
                         <li className='hover:text-black transition'><a href="#contact">Contacts</a></li>
-                        <li className='hover:text-black transition'><a href="#project">Projects</a></li>
+                        <li className='hover:text-black transition'><a href="#project">Projets</a></li>
                     </ul>
                 </div>
             </div>

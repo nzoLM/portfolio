@@ -20,7 +20,7 @@ export function Carousel({ slides }) {
           <div
             key={index}
             className={`w-full m-auto flex-shrink-0 transition-all duration-200 ${
-              index === currentIndex ? "opacity-100" : "opacity-0"
+              index === currentIndex ? "opacity-100 blur-none scale-x-100" : "opacity-0 blur-lg scale-x-150"
             }`}
           >
             {slide}
