@@ -7,7 +7,7 @@ export function About(){
 
     return(
         <div id="about" className="relative flex flex-col min-h-screen bg-black h-full">
-            <Image src={Star} className="absolute w-full h-full p-5"/>
+            <Image alt="Star-circle icon" src={Star} className="absolute w-full h-full p-5"/>
             <div className="z-0 flex flex-col items-center align-center w-1/2 h-screen self-center">
                 <h1 className="text-6xl text-center pt-16">À PROPOS</h1>
                 <div className="flex flex-col justify-center items-center text-center my-auto gap-10">
@@ -17,8 +17,10 @@ export function About(){
                     Je me suis découvert une passion pour l'informatique, la programmation plus précisément au lycée, 
                     c'est comme ça que tout naturellement, je me suis tourné vers le développement web qui était un très bon compromis entre l'art et la programmation.
                     </p>
-
-                    <a href="files/CV.pdf" download="EnzoLeMoal.pdf" className="flex gap-5 items-center text-2xl cursor-pointer bg-transparent p-1 transition hover:scale-125"><Image src={WhiteStar} alt="star logo" height={50}/>Télécharger mon CV<Image src={WhiteStar} alt="star logo" height={50}/></a>
+                    <div className="relative w-fit h-fit border-4 border-[#A79EA1] border-double hover:bg-[#A79EA1] hover:text-black transition">
+                        <a href="files/CV.pdf" download="EnzoLeMoal.pdf" className="flex gap-5 items-center text-2xl cursor-pointer bg-transparent"><Image src={WhiteStar} alt="Star logo" height={50}/>Télécharger mon CV<Image src={WhiteStar} alt="Star logo" height={50}/></a>
+                        {/* <div className="w-full h-full top-0 left-0 absolute bg-white scale-y-5 hover:scale-y-100 transition"></div> */}
+                    </div>
                 </div>
                 <div>
                 </div>

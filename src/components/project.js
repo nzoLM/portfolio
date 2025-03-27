@@ -10,7 +10,7 @@ import {Carousel} from "./carousel";
 export function Project(){
 
     const projects = [
-        <div className="gap-10 flex flex-col">
+        <div key={0} className="gap-10 flex flex-col">
             <div>
                 <h1 className="text-6xl">Tweet Academie</h1>
             </div>
@@ -25,7 +25,7 @@ export function Project(){
             </p>
             <a className="w-fit self-center" href="https://github.com/nzoLM/tweet-academie" target="_blank"><FaGithub className="text-5xl hover:scale-150 hover:fill-white transition-all duration-200"/></a>
         </div>,
-        <div className="gap-10 flex flex-col">
+        <div key={1} className="gap-10 flex flex-col">
             <div >
                 <h1 className="text-6xl">My meetic</h1>
             </div>
@@ -40,7 +40,7 @@ export function Project(){
             </p>
             <a className="w-fit self-center" target="_blank" href="https://github.com/nzoLM/my-meetic"><FaGithub className="text-5xl hover:scale-150 hover:fill-white transition-all duration-200"/></a>
         </div>,
-         <div className="gap-10 flex flex-col">
+         <div key={2} className="gap-10 flex flex-col">
          <div >
              <h1 className="text-6xl">CSS Generator</h1>
          </div>
@@ -53,7 +53,7 @@ export function Project(){
          </p>
          <a className="w-fit self-center" href="https://github.com/nzoLM/css-generator" target="_blank"><FaGithub className="text-5xl hover:scale-150 hover:fill-white transition-all duration-200"/></a>
         </div>,
-        <div className="gap-10 flex flex-col">
+        <div key={3} className="gap-10 flex flex-col">
             <div >
                 <h1 className="text-6xl">Todo List</h1>
             </div>
@@ -69,7 +69,7 @@ export function Project(){
             <a className="w-fit self-center" href="https://github.com/nzoLM/todo-list" target="_blank"><FaGithub className="text-5xl hover:scale-150 hover:fill-white transition-all duration-200"/></a>
             <a href="https://nzolm.github.io/todo-list/">Visit Website</a>
        </div>,
-       <div className="gap-10 flex flex-col">
+       <div key={4} className="gap-10 flex flex-col">
         <div >
             <h1 className="text-6xl">Morpion</h1>
         </div>
@@ -85,7 +85,7 @@ export function Project(){
         <a className="w-fit self-center" href="https://github.com/nzoLM/todo-list" target="_blank"><FaGithub className="text-5xl hover:scale-150 hover:fill-white transition-all duration-200"/></a>
         <a href="https://nzolm.github.io/todo-list/">Visit Website</a>
       </div>,
-      <div className="gap-10 flex flex-col">
+      <div key={5} className="gap-10 flex flex-col">
       <div >
           <h1 className="text-6xl">Calculatrice</h1>
       </div>
@@ -107,11 +107,11 @@ export function Project(){
         <div id="project" className="flex flex-col bg-[#A79EA1] min-h-screen max-h-screen text-black ">
             <div className="flex justify-around my-5">
                 <div>
-                    <Image src={Ray2}/>
+                    <Image alt="Arrow logo" src={Ray2}/>
                 </div>
                 <h1 className="text-6xl text-center h-fit self-center">Projets</h1>
                 <div>
-                    <Image src={Ray2} className="rotate-180"/>
+                    <Image alt="Arrow logo" src={Ray2} className="rotate-180"/>
                 </div>
             </div>
             <h1 className="text-4xl self-center">{projects.length} projets réalisés</h1>
@@ -123,7 +123,7 @@ export function Project(){
                     <Carousel slides={projects}/>
                 </div>
                 <div className="w-1/2 flex justify-center items-center">
-                    <Image src={Stars} className="self-center hover:fill-black "/>
+                    <Image alt="Arrow logo" src={Stars} className="self-center hover:fill-black "/>
                 </div>
             </div>
         </div>

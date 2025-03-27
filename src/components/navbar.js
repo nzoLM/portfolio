@@ -10,7 +10,7 @@ export function Navbar(){
                 </div>
                 <div className='m-auto'>
                     <a href="#top">
-                        <Image className='self-center w-20 h-20 hover:scale-150 transition duration-200' src={CrossStar}/>
+                        <Image alt="Star logo" className='self-center w-20 h-20 hover:scale-150 transition duration-200' src={CrossStar}/>
                     </a>
                 </div>
                 <div className='text-xl w-96'>

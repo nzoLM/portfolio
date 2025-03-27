@@ -31,13 +31,13 @@ export function Carousel({ slides }) {
         className="absolute top-1/2 left-5 transform -translate-y-1/2 p-2 cursor-pointer"
         onClick={prevSlide}
       >
-      <Image src={ArrowBlack} className="w-20 h-20 hover:scale-x-125 transition-all duration-200"/>
+      <Image alt="Star logo" src={ArrowBlack} className="w-20 h-20 hover:scale-x-125 transition-all duration-200"/>
       </button>
       <button
         className="absolute top-1/2 right-5 transform -translate-y-1/2 p-2 cursor-pointer hover:text-white "
         onClick={nextSlide}
       >
-        <Image src={ArrowBlack} className="w-20 h-20 rotate-180 hover:scale-x-125 transition-all duration-200"/>
+        <Image alt="Star logo" src={ArrowBlack} className="w-20 h-20 rotate-180 hover:scale-x-125 transition-all duration-200"/>
       </button>
     </div>
   );
