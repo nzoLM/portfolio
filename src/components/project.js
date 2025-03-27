@@ -36,7 +36,7 @@ export function Project(){
                 </div>
             <p className="text-2xl h-full text-center">
                 Projet solo, durée de 2 semaines<br/>
-                Reproduction des fonctionnalités d'un site de rencontre.
+                Reproduction des fonctionnalités d&apos;un site de rencontre.
             </p>
             <a className="w-fit self-center" target="_blank" href="https://github.com/nzoLM/my-meetic"><FaGithub className="text-5xl hover:scale-150 hover:fill-white transition-all duration-200"/></a>
         </div>,
@@ -49,7 +49,7 @@ export function Project(){
              </div>
          <p className="text-2xl h-full text-center">
              Projet solo, durée de 2 semaines<br/>
-            Génération d'un sprite à partir de plusieures images.
+            Génération d&apos;un sprite à partir de plusieures images.
          </p>
          <a className="w-fit self-center" href="https://github.com/nzoLM/css-generator" target="_blank"><FaGithub className="text-5xl hover:scale-150 hover:fill-white transition-all duration-200"/></a>
         </div>,
