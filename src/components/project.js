@@ -6,7 +6,7 @@ import Image from "next/image";
 import Stars from "../../public/stars.svg";
 import Ray2 from "../../public/ray2.svg";
 import {Carousel} from "./carousel";
-
+import {motion} from 'motion/react';
 export function Project(){
 
     const projects = [
@@ -23,7 +23,9 @@ export function Project(){
                 Projet de groupe, 4 personnes, durée de 1 mois <br />
                 Reproduction des fonctionnalités de Twitter/X.
             </p>
-            <a className="w-fit self-center" href="https://github.com/nzoLM/tweet-academie" target="_blank"><FaGithub className="text-5xl hover:scale-150 hover:fill-white transition-all duration-200"/></a>
+            <motion.a whileHover={{ scale: 1.5 }}
+            whileTap={{ scale: 0.95 }} href="https://github.com/nzoLM/tweet-academie" className="w-fit self-center" target="_blank"><FaGithub className="text-5xl hover:fill-white transition-all duration-200"/></motion.a>
+            
         </div>,
         <div key={1} className="gap-10 flex flex-col">
             <div >
@@ -38,7 +40,8 @@ export function Project(){
                 Projet solo, durée de 2 semaines<br/>
                 Reproduction des fonctionnalités d&apos;un site de rencontre.
             </p>
-            <a className="w-fit self-center" target="_blank" href="https://github.com/nzoLM/my-meetic"><FaGithub className="text-5xl hover:scale-150 hover:fill-white transition-all duration-200"/></a>
+            <motion.a whileHover={{ scale: 1.5 }}
+            whileTap={{ scale: 0.95 }} href="https://github.com/nzoLM/my-meetic" className="w-fit self-center" target="_blank"><FaGithub className="text-5xl hover:fill-white transition-all duration-200"/></motion.a>
         </div>,
          <div key={2} className="gap-10 flex flex-col">
          <div >
@@ -51,7 +54,8 @@ export function Project(){
              Projet solo, durée de 2 semaines<br/>
             Génération d&apos;un sprite à partir de plusieures images.
          </p>
-         <a className="w-fit self-center" href="https://github.com/nzoLM/css-generator" target="_blank"><FaGithub className="text-5xl hover:scale-150 hover:fill-white transition-all duration-200"/></a>
+         <motion.a whileHover={{ scale: 1.5 }}
+            whileTap={{ scale: 0.95 }} href="https://github.com/nzoLM/css-generator" className="w-fit self-center" target="_blank"><FaGithub className="text-5xl hover:fill-white transition-all duration-200"/></motion.a>
         </div>,
         <div key={3} className="gap-10 flex flex-col">
             <div >
@@ -66,7 +70,8 @@ export function Project(){
                 Projet solo<br/>
             To do List réalisé en auto didacte.
             </p>
-            <a className="w-fit self-center" href="https://github.com/nzoLM/todo-list" target="_blank"><FaGithub className="text-5xl hover:scale-150 hover:fill-white transition-all duration-200"/></a>
+            <motion.a whileHover={{ scale: 1.5 }}
+            whileTap={{ scale: 0.95 }} href="https://github.com/nzoLM/todo-list" className="w-fit self-center" target="_blank"><FaGithub className="text-5xl hover:fill-white transition-all duration-200"/></motion.a>
             <a href="https://nzolm.github.io/todo-list/">Visit Website</a>
        </div>,
        <div key={4} className="gap-10 flex flex-col">
@@ -82,8 +87,9 @@ export function Project(){
             Projet solo<br/>
             Morpion réalisé en auto didacte.
         </p>
-        <a className="w-fit self-center" href="https://github.com/nzoLM/todo-list" target="_blank"><FaGithub className="text-5xl hover:scale-150 hover:fill-white transition-all duration-200"/></a>
-        <a href="https://nzolm.github.io/todo-list/">Visit Website</a>
+        <motion.a whileHover={{ scale: 1.5 }}
+            whileTap={{ scale: 0.95 }} href="https://github.com/nzoLM/tic-tac-toe" className="w-fit self-center" target="_blank"><FaGithub className="text-5xl hover:fill-white transition-all duration-200"/></motion.a>
+        <a href="https://nzolm.github.io/tic-tac-toe/">Visit Website</a>
       </div>,
       <div key={5} className="gap-10 flex flex-col">
       <div >
@@ -98,7 +104,9 @@ export function Project(){
           Projet solo<br/>
           Calculatrice réalisé en auto didacte.
       </p>
-      <a className="w-fit self-center" href="https://github.com/nzoLM/odin-calculator" target="_blank"><FaGithub className="text-5xl hover:scale-150 hover:fill-white hover-scale-150 transition-all duration-200"/></a>
+      
+      <motion.a whileHover={{ scale: 1.5 }}
+            whileTap={{ scale: 0.95 }} className="w-fit self-center" href="https://github.com/nzoLM/odin-calculator" target="_blank"><FaGithub className="text-5xl hover:fill-white transition-all duration-200"/></motion.a>
       <a href="https://nzolm.github.io/odin-calculator/">Visit Website</a>
     </div>,
     ];

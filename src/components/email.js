@@ -22,7 +22,7 @@ export const ContactUs = () => {
   };
 
   return (
-    <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-10 w-1/2">
+    <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-10 lg:w-1/2">
         <h1 className="text-4xl text-black p-10">Me contacter :</h1>
         <input type="text" name='name' className="border-b border-black text-black text-2xl" placeholder="Nom" />
         <input type="email" name='email' className="border-b border-black text-black text-2xl" placeholder="Email" />
