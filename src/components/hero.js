@@ -10,7 +10,7 @@ export function Hero(){
             </div>
             <div className="text-center lg:text-right lg:w-1/2 h-full p-5">
                 <h1 className="text-5xl lg:text-7xl">DÉVELOPPEUR WEB - FULL STACK</h1>
-                <h4 className="text-xl analogist">En recherche d'alternance,<br /> Durée 14 mois,<br /> Rythme 3 semaines entreprise, 1 semaine formation</h4>
+                <h4 className="text-xl analogist">En recherche d&apos;alternance,<br /> Durée 14 mois,<br /> Rythme 3 semaines entreprise, 1 semaine formation</h4>
             </div>
         </div>
     )
