@@ -10,7 +10,7 @@ export function Technologies() {
   
 
   return (
-    <div id="tech-section" className="relative min-h-screen max-h-screen flex flex-col bg-black">
+    <div id="tech-section" className="relative min-h-screen max-h-screen flex flex-col bg-black p-10 lg:p-20 text-white">
       <h1 className="text-5xl lg:text-6xl lg:p-20 text-center lg:text-left">Technologies utilisées</h1>
       <ul className="grid grid-cols-2 grow mb-10 lg:w-1/2 self-center gap-10">
         <li className="flex items-center justify-center w-fit">

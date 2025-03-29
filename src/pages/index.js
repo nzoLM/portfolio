@@ -7,7 +7,7 @@ import { Technologies } from "@/components/technologies";
 import { Contact } from "@/components/contact";
 export default function Home() {
   return (
-    <div className="fontWacks bg-[#A79EA1]">
+    <div className="fontWacks bg-[#A79EA1] text-white">
       <div id="top" className="min-h-screen max-h-screen flex flex-col ">
         <Navbar/>
         <Hero/>
