@@ -19,10 +19,11 @@ export function Carousel({ slides }) {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`w-full m-auto flex-shrink-0 transition-all duration-200 ${
+            className={`relative w-full m-auto flex-shrink-0 transition-all duration-200 ${
               index === currentIndex ? "opacity-100 blur-none scale-x-100" : "opacity-0 blur-lg scale-x-150"
             }`}
           >
+            <h3 className="text-xl my-5">{index + 1} / {slides.length}</h3>
             {slide}
           </div>
         ))}
@@ -31,13 +32,13 @@ export function Carousel({ slides }) {
         className="absolute top-1/2 left-5 transform -translate-y-1/2 p-2 cursor-pointer"
         onClick={prevSlide}
       >
-      <Image alt="Star logo" src={ArrowBlack} className="w-20 h-20 hover:scale-x-125 transition-all duration-200"/>
+      <Image alt="Star logo" src={ArrowBlack} className="w-15 h-15 md:w-20 md:h-20 hover:scale-x-125 transition-all duration-200"/>
       </button>
       <button
         className="absolute top-1/2 right-5 transform -translate-y-1/2 p-2 cursor-pointer hover:text-white "
         onClick={nextSlide}
       >
-        <Image alt="Star logo" src={ArrowBlack} className="w-20 h-20 rotate-180 hover:scale-x-125 transition-all duration-200"/>
+        <Image alt="Star logo" src={ArrowBlack} className="w-15 h-15 md:w-20 md:h-20 rotate-180 hover:scale-x-125 transition-all duration-200"/>
       </button>
     </div>
   );

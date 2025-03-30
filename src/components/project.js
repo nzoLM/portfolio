@@ -112,25 +112,25 @@ export function Project(){
     ];
 
     return(
-        <div id="project" className="flex flex-col bg-[#A79EA1] min-h-screen max-h-screen text-black ">
-            <div className="flex justify-around my-5">
+        <div id="project" className="flex flex-col bg-[#A79EA1] min-h-screen max-h-screen text-black md:gap-0 gap-10">
+            <div className="flex justify-around md:my-5 my-10">
                 <div>
                     <Image alt="Arrow logo" src={Ray2}/>
                 </div>
-                <h1 className="text-6xl text-center h-fit self-center">Projets</h1>
+                <h1 className="text-4xl lg:text-6xl text-center md:h-fit self-center">Projets</h1>
                 <div>
                     <Image alt="Arrow logo" src={Ray2} className="rotate-180"/>
                 </div>
             </div>
-            <h1 className="text-4xl self-center">{projects.length} projets réalisés</h1>
-            <div className="flex h-full grow justify-center">
+            <h1 className="lg:text-4xl text-2xl self-center">{projects.length} projets réalisés</h1>
+            <div className="flex md:grow justify-center">
                 {/* Animation : rotation de plusieurs étoiles ici */}
                 {/* Afficher les projets en hover étoiles */}
                 
-                <div className="w-full z-10 flex m-10 flex-col text-center gap-10">
+                <div className="w-full z-10 flex flex-col text-center gap-10">
                     <Carousel slides={projects}/>
                 </div>
-                <div className="w-1/2 flex justify-center items-center">
+                <div className="hidden w-1/2 xl:flex justify-center items-center">
                     <Image alt="Arrow logo" src={Stars} className="self-center hover:fill-black "/>
                 </div>
             </div>
