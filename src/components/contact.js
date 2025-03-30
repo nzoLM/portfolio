@@ -22,6 +22,8 @@ export function Contact(){
                     </ul>   
                 </div>  
             </div>
+                  <div className="bg-linear-to-b from-transparent to-black h-40"></div>
+            
         </div>
     )
 }

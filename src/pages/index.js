@@ -19,6 +19,7 @@ export default function Home() {
       <div className="bg-linear-to-b from-[#A79EA1] to-black h-40"></div>
       <Technologies/>
       <Contact/>
+      <Footer/>
     </div>
   );
 }
