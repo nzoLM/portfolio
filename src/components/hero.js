@@ -8,9 +8,11 @@ export function Hero(){
             <div className="w-1/2 lg:p-10 flex items-center justify-center">
                 <Image alt="Star icon" src={Star} className="lg:w-3/5 w-full items-center"/>
             </div>
-            <div className="text-center lg:text-right lg:w-1/2 h-full lg:p-5">
+            <div className="flex flex-col text-center lg:text-right lg:w-1/2 h-full lg:p-5 gap-10">
                 <h1 className="text-5xl lg:text-7xl">DÉVELOPPEUR WEB - FULL STACK</h1>
                 <h4 className="text-xl analogist">En recherche d&apos;alternance,<br /> Durée 14 mois,<br /> Rythme 3 semaines entreprise, 1 semaine formation</h4>
+                <p className="">Je suis convaincu que l&apos;art est présent partout, il vit sous toutes formes et je me permets d&apos;y mettre l&apos;intention quand je code.
+                Je vous propose donc de porter mes lunettes ici.</p>
             </div>
         </div>
     )
