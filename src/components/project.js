@@ -112,7 +112,7 @@ export function Project(){
     ];
 
     return(
-        <div id="project" className="flex flex-col bg-[#A79EA1] min-h-screen max-h-screen text-black md:gap-0 gap-10">
+        <div id="project" className="flex flex-col bg-[#A79EA1] min-h-screen  text-black md:gap-0 gap-10">
             <div className="flex justify-around md:my-5 my-10">
                 <div>
                     <Image alt="Arrow logo" src={Ray2}/>

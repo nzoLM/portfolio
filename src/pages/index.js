@@ -10,7 +10,7 @@ import {Footer} from "@/components/footer";
 export default function Home() {
   return (
     <div className="fontWacks bg-[#A79EA1] text-white">
-      <div id="top" className="min-h-screen max-h-screen flex flex-col ">
+      <div id="top" className="min-h-screen flex flex-col ">
         <Navbar/>
         <Hero/>
       </div>

@@ -18,7 +18,7 @@ export function Technologies() {
   ];
 
   return (
-    <div id="tech-section" className="relative min-h-screen max-h-screen flex flex-col bg-black text-white">
+    <div id="tech-section" className="relative min-h-screen flex flex-col bg-black text-white">
       <h1 className="text-5xl lg:text-6xl py-20 lg:p-10 text-center lg:text-left">Technologies utilisées</h1>
       <ul className="grid grid-cols-2 lg:w-1/2 grow self-center gap-10">
         {technologies.map((tech, index) => (
