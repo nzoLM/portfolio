@@ -9,9 +9,10 @@ import {Footer} from "@/components/footer";
 
 export default function Home() {
   return (
-    <div className="fontWacks bg-[#A79EA1] text-white overflow-x-hidden">
+    <div className="fontWacks bg-[#A79EA1] text-white">
         <Navbar/>
       <div id="top" className="min-h-screen flex flex-col ">
+        <div className="h-48 lg:h-[128px]"></div>
         <Hero/>
       </div>
       <div className="bg-linear-to-b from-[#A79EA1] to-black h-40"></div>

@@ -10,7 +10,6 @@ export function Navbar() {
   const [lastScrollY, setLastScrollY] = useState(0);
 
   const handleToggle = () => setIsOpen(!isOpen);
-
   
   useEffect(() => {
     const handleScroll = () => {
@@ -42,7 +41,7 @@ export function Navbar() {
       initial={{ y: 0 }}
       animate={{ y: showNavbar ? 0 : -150 }}
       transition={{ duration: 0.3 }}
-      className="sticky top-0 left-0 w-full z-50"
+      className="fixed top-0 left-0 w-full h-46 lg:h-fit z-50"
     >
       <div className='flex relative items-center p-10 bg-gradient-to-b from-[#A79EA1] to-transparent gap-5 w-full text-white justify-between'>
         <div className="lg:w-96">
@@ -55,10 +54,10 @@ export function Navbar() {
             </motion.div>
           </a>
         </div>
-        <div className='text-xl'>
+        <div className='text-xl' onClick={handleToggle}>
           <div className='flex md:hidden'>
-            <motion.div whileHover={{ scale: 1.5 }} whileTap={{ scale: 0.5 }} className='w-fit' onClick={handleToggle}>
-              <Image alt='Hamburger icon' className='self-center w-20 h-20' src={HamburgerWhite} />
+            <motion.div whileHover={{ scale: 1.3 }} whileTap={{ scale: 0.5 }} className='w-20 h-20' >
+              <Image alt='Hamburger icon' className='self-center w-full h-full' src={HamburgerWhite}/>
             </motion.div>
           </div>
           <div className="hidden md:flex md:gap-5 lg:gap-10 lg:text-2xl text-center">
@@ -76,12 +75,12 @@ export function Navbar() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 20 }}
-              className='absolute top-full right-0 w-fit max-h-screen pl-20 p-10 pr-0 z-10'
+              className='absolute top-full right-0 w-fit max-h-screen pl-10 p-10 pr-0 z-10'
             >
               <ul className="flex flex-col gap-3 text-right text-2xl text-white">
-                <li onClick={handleToggle} className='hover:text-black transition bg-gradient-to-l from-[#A79EA1] to-transparent p-5 '><a href="#about">About</a></li>
-                <li onClick={handleToggle} className='hover:text-black transition bg-gradient-to-l from-[#A79EA1] to-transparent p-5'><a href="#contact">Contacts</a></li>
-                <li onClick={handleToggle} className='hover:text-black transition bg-gradient-to-l from-[#A79EA1] to-transparent p-5'><a href="#project">Projets</a></li>
+                <li onClick={handleToggle} className='hover:text-black transition bg-gradient-to-l from-[#7c7672] to-transparent w-80 p-5'><a href="#about">About</a></li>
+                <li onClick={handleToggle} className='hover:text-black transition bg-gradient-to-l from-[#7c7672] to-transparent p-5'><a href="#contact">Contacts</a></li>
+                <li onClick={handleToggle} className='hover:text-black transition bg-gradient-to-l from-[#7c7672] to-transparent p-5'><a href="#project">Projets</a></li>
               </ul>
             </motion.div>
           )}
