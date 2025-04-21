@@ -35,7 +35,6 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
   
-
   return (
     <motion.nav
       initial={{ y: 0 }}
@@ -54,8 +53,8 @@ export function Navbar() {
             </motion.div>
           </a>
         </div>
-        <div className='text-xl' onClick={handleToggle}>
-          <div className='flex md:hidden'>
+        <div className='text-xl'>
+          <div className='flex md:hidden' onClick={handleToggle}>
             <motion.div whileHover={{ scale: 1.3 }} whileTap={{ scale: 0.5 }} className='w-20 h-20' >
               <Image alt='Hamburger icon' className='self-center w-full h-full' src={HamburgerWhite}/>
             </motion.div>
@@ -77,10 +76,10 @@ export function Navbar() {
               exit={{ opacity: 0, x: 20 }}
               className='absolute top-full right-0 w-fit max-h-screen pl-10 p-10 pr-0 z-10'
             >
-              <ul className="flex flex-col gap-3 text-right text-2xl text-white">
-                <li onClick={handleToggle} className='hover:text-black transition bg-gradient-to-l from-[#7c7672] to-transparent w-80 p-5'><a href="#about">About</a></li>
-                <li onClick={handleToggle} className='hover:text-black transition bg-gradient-to-l from-[#7c7672] to-transparent p-5'><a href="#contact">Contacts</a></li>
-                <li onClick={handleToggle} className='hover:text-black transition bg-gradient-to-l from-[#7c7672] to-transparent p-5'><a href="#project">Projets</a></li>
+              <ul className="flex flex-col gap-3 text-right text-2xl text-white w-80">
+                <li onClick={handleToggle} className='hover:text-black transition bg-gradient-to-l from-[#7c7672] to-transparent'><a className='block w-full p-5' href="#about">About</a></li>
+                <li onClick={handleToggle} className='hover:text-black transition bg-gradient-to-l from-[#7c7672] to-transparent'><a className='block w-full p-5' href="#contact">Contacts</a></li>
+                <li onClick={handleToggle} className='hover:text-black transition bg-gradient-to-l from-[#7c7672] to-transparent'><a className='block w-full p-5' href="#project">Projets</a></li>
               </ul>
             </motion.div>
           )}
