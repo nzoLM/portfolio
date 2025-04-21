@@ -1,4 +1,3 @@
-import {Tektur} from "next/font/google";
 import {Navbar} from "@/components/navbar";
 import {Hero} from "@/components/hero";
 import {Project} from "@/components/project";
