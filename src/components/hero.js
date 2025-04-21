@@ -35,7 +35,7 @@ export function Hero(){
                 animated={{opacity: 1, x:0}}
                 transition={{duration: 1.5, bounce: 0.6, type: "spring"}}
                 viewport={{ once: true, amount: 0.5 }}>
-                <h1 className="text-5xl lg:text-7xl">DÉVELOPPEUR WEB - FULL STACK</h1>
+                <h2 className="text-5xl lg:text-7xl">DÉVELOPPEUR WEB - FULL STACK</h2>
                 <h4 className="text-xl analogist">En recherche d&apos;alternance,<br /> Durée 14 mois,<br /> Rythme 3 semaines entreprise, 1 semaine formation</h4>
                 <p className="">Je suis convaincu que l&apos;art est présent partout, il vit sous toutes formes et je me permets d&apos;y mettre l&apos;intention quand je code.
                 Je vous propose donc de porter mes lunettes ici.</p>
