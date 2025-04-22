@@ -18,16 +18,38 @@ export function Technologies() {
   ];
 
   return (
-    <div id="tech-section" className="relative min-h-screen flex flex-col bg-black text-white">
-      <h1 className="text-5xl lg:text-6xl py-20 lg:p-10 text-center lg:text-left">Technologies utilisées</h1>
+    <div id="tech-section" className="relative min-h-screen flex flex-col bg-black text-white overflow-hidden">
+      <motion.h1 
+      initial={{opacity: 0, x: 100}}
+      whileInView={{opacity: 1, x: 0}}
+      animated={{opacity: 1, x:0}}
+      transition={{x:{
+          type: "spring",
+          damping: 10,
+          duration: 1,
+          }}}
+      viewport={{ once: true, amount: 0.5 }}
+      className="text-5xl lg:text-6xl py-20 lg:p-10 text-center lg:text-left">Technologies utilisées</motion.h1>
       <ul className="grid grid-cols-2 lg:w-1/2 grow self-center gap-10">
         {technologies.map((tech, index) => (
           <li key={index} className={`flex items-center justify-center relative ${tech.fullWidth ? 'col-span-2' : 'w-fit'}`}>
             <div className="relative flex items-center justify-center">
               <motion.div
+              initial={{opacity: 0, x: -50}}
+              whileInView={{opacity: 1, x: 0}}
+              animated={{opacity: 1, x:0}}
+              viewport={{ once: true, amount: 0.5 }}
                 whileHover={{ rotate: 180, scale: 2 }}
                 whileTap={{ rotate: 180, scale: 0.95 }}
-                transition={{ duration: 0.9, ease: [0, 0.71, 0.2, 1.4], bounce: 0.25, type: "spring" }}
+                transition={{
+                  x: {
+                    duration: 2,
+                    type: "spring",
+                    bounce: 0.6,
+                  },
+                  scale: { duration: 0.9, ease: [0, 0.71, 0.2, 1.4], bounce: 0.25, type: "spring" },
+                  rotate: { duration: 0.9, ease: [0, 0.71, 0.2, 1.4], bounce: 0.25, type: "spring" },
+                }}
                 onMouseEnter={() => setTooltip(tech.name)}
                 onMouseLeave={() => setTooltip(null)}
                 className="relative z-10"

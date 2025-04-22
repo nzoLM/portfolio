@@ -1,6 +1,7 @@
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { ContactUs } from "./email";
+import { motion } from "motion/react";
 
 export function Contact(){
 
@@ -15,10 +16,30 @@ export function Contact(){
                 </div>
                 <div className="text-2xl lg:w-1/2 lg:m-auto self-center text-left p-10">
                     <ul className="flex lg:flex-col justify-around flex-wrap m-auto gap-5 w-fit">
-                        <li className="w-fit hover:scale-x-150 transition duration-250"><a href="https://github.com/nzoLM" className="flex gap-5"><FaGithub/>Github</a></li>
-                        <li className="w-fit hover:scale-x-150 transition duration-250"><a className="flex gap-5" href="https://www.linkedin.com/in/enzo-le-moal"><FaLinkedinIn/>LinkedIn</a></li>
-                        <li className="flex gap-2 "><a className="text-2xl" href="">lemoalenzo05@gmail.com</a></li>
-                        <li className="w-fit">Paris, France</li>
+                        <motion.li transition={{
+                        type: "spring",
+                        stiffness: 300,
+                        damping: 10,
+                        duration: 0.3,
+                        }} whileHover={{scaleX : 1.5}} className="w-fit"><a href="https://github.com/nzoLM" className="flex gap-5"><FaGithub/>Github</a></motion.li>
+                        <motion.li transition={{
+                        type: "spring",
+                        stiffness: 300,
+                        damping: 10,
+                        duration: 0.3,
+                        }} whileHover={{scaleX : 1.5}} className="w-fit"><a className="flex gap-5" href="https://www.linkedin.com/in/enzo-le-moal"><FaLinkedinIn/>LinkedIn</a></motion.li>
+                        <motion.li transition={{
+                        type: "spring",
+                        stiffness: 300,
+                        damping: 10,
+                        duration: 0.3,
+                        }} whileHover={{scaleX : 1.3}} className="flex gap-2 "><a className="text-2xl" href="">lemoalenzo05@gmail.com</a></motion.li>
+                        <motion.li transition={{
+                        type: "spring",
+                        stiffness: 300,
+                        damping: 10,
+                        duration: 0.3,
+                        }} whileHover={{scaleX : 1.5}} className="w-fit">Paris, France</motion.li>
                     </ul>   
                 </div>  
             </div>

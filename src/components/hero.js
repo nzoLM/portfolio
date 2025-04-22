@@ -15,16 +15,15 @@ export function Hero(){
                 <motion.div className="w-full"
                     animate={{
                         // Keyframes : définit les étapes de l'animation pour 'y'
-                        y: ["0%", "10%", "0%"]
+                        y: ["0%", "10%", "0%"],
                       }}
                       transition={{
-                        duration: 8, // Durée d'un cycle complet (en secondes)
-                        repeat: Infinity, // Répète l'animation à l'infini
-                        repeatType: "loop", // Type de répétition ('loop', 'reverse', 'mirror')
-                                         // 'loop' redémarre du début à chaque fois
-                        ease: "easeInOut", // Contrôle la courbe d'accélération/décélération
-                                           // 'easeInOut' est doux au début et à la fin
+                        duration: 5,
+                        repeat: Infinity,
+                        repeatType: "loop",
+                        ease: "easeInOut",
                       }}
+
                 >
                 <Image alt="Star icon" src={Star} className="lg:w-3/5 w-full items-center"/>
                 </motion.div>

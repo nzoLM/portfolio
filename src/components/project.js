@@ -112,27 +112,82 @@ export function Project(){
     ];
 
     return(
-        <div id="project" className="flex flex-col bg-[#A79EA1] min-h-screen  text-black md:gap-0 gap-10">
+        <div id="project" className="flex flex-col bg-[#A79EA1] min-h-screen  text-black md:gap-0 gap-10 overflow-hidden">
             <div className="flex justify-around md:my-5 my-10">
-                <div>
+                <motion.div initial={{opacity: 0, x: -50}}
+                    whileInView={{opacity: 1, x: 0}}
+                    animated={{opacity: 1, x:0}}
+                    transition={{x:{
+                        type: "spring",
+                        damping: 10,
+                        duration: 1,
+                        }}}
+                    viewport={{ once: true, amount: 0.5 }}>
                     <Image alt="Arrow logo" src={Ray2}/>
-                </div>
-                <h1 className="text-4xl lg:text-6xl text-center md:h-fit self-center">Projets</h1>
-                <div>
+                </motion.div>
+                <motion.h1 
+                initial={{opacity: 0, y: -50}}
+                whileInView={{opacity: 1, y: 0}}
+                animated={{opacity: 1, y:0}}
+                transition={{y:{
+                    type: "spring",
+                    damping: 10,
+                    duration: 1,
+                    }}}
+                viewport={{ once: true, amount: 0.5 }}
+                className="text-4xl lg:text-6xl text-center md:h-fit self-center">Projets</motion.h1>
+                <motion.div
+                initial={{opacity: 0, x: 50}}
+                whileInView={{opacity: 1, x: 0}}
+                animated={{opacity: 1, x:0}}
+                transition={{x:{
+                    type: "spring",
+                    damping: 10,
+                    duration: 1,
+                    }}}
+                viewport={{ once: true, amount: 0.5 }}>
                     <Image alt="Arrow logo" src={Ray2} className="rotate-180"/>
-                </div>
+                </motion.div>
             </div>
-            <h1 className="lg:text-4xl text-2xl self-center">{projects.length} projets réalisés</h1>
+            <motion.h1 
+            initial={{opacity: 0, y: 50}}
+            whileInView={{opacity: 1, y: 0}}
+            animated={{opacity: 1, y:0}}
+            transition={{y:{
+                type: "spring",
+                damping: 10,
+                duration: 1,
+                }}}
+            viewport={{ once: true, amount: 0.5 }}
+            className="lg:text-4xl text-2xl self-center">{projects.length} projets réalisés</motion.h1>
             <div className="flex md:grow justify-center">
                 {/* Animation : rotation de plusieurs étoiles ici */}
                 {/* Afficher les projets en hover étoiles */}
                 
-                <div className="w-full z-10 flex flex-col text-center gap-10">
+                <motion.div initial={{opacity: 0, x: -50}}
+                    whileInView={{opacity: 1, x: 0}}
+                    animated={{opacity: 1, x:0}}
+                    transition={{x:{
+                        type: "spring",
+                        damping: 10,
+                        duration: 1,
+                        }}}
+                    viewport={{ once: true, amount: 0.5 }}
+                className="w-full z-10 flex flex-col text-center gap-10">
                     <Carousel slides={projects}/>
-                </div>
-                <div className="hidden w-1/2 xl:flex justify-center items-center">
-                    <Image alt="Arrow logo" src={Stars} className="self-center hover:fill-black "/>
-                </div>
+                </motion.div>
+                <motion.div initial={{opacity: 0, x: 50}}
+                    whileInView={{opacity: 1, x: 0}}
+                    animated={{opacity: 1, x:0}}
+                    transition={{x:{
+                        type: "spring",
+                        damping: 10,
+                        duration: 1,
+                        }}}
+                    viewport={{ once: true, amount: 0.5 }}
+                className="hidden w-1/2 xl:flex justify-center items-center">
+                    <Image alt="Star logo" src={Stars} className="self-center hover:fill-black "/>
+                </motion.div>
             </div>
         </div>
     );
