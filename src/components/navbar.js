@@ -115,7 +115,7 @@ export function Navbar() {
           viewport={{ once: true, amount: 0.5 }} 
            className="hidden md:flex md:gap-5 lg:gap-10 lg:text-2xl text-center">
             <ul className="flex gap-3 justify-between sm:justify-around">
-              <li className='hover:text-black transition'><a href="#about">About</a></li>
+              <li className='hover:text-black transition'><a href="#about">À propos</a></li>
               <li className='hover:text-black transition'><a href="#contact">Contacts</a></li>
               <li className='hover:text-black transition'><a href="#project">Projets</a></li>
             </ul>
