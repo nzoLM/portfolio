@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import ArrowBlack from '../../public/arrow-custom-black.svg';
+import {motion } from 'motion/react';
 
 export function Carousel({ slides }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -28,18 +29,34 @@ export function Carousel({ slides }) {
           </div>
         ))}
       </div>
-      <button
+      <motion.button
+      initial={{scaleX:1}}
+      whileHover={{scaleX:1.4}}
+      transition={{scaleX:{
+        type: "spring",
+        stiffness: 250,
+        damping: 10,
+        duration: 0.3,
+          }}}
         className="absolute top-1/2 left-5 transform -translate-y-1/2 p-2 cursor-pointer"
         onClick={prevSlide}
       >
-      <Image alt="Star logo" src={ArrowBlack} className="w-15 h-15 md:w-20 md:h-20 hover:scale-x-125 transition-all duration-200"/>
-      </button>
-      <button
+      <Image alt="Star logo" src={ArrowBlack} className="w-15 h-15 md:w-20 md:h-20 "/>
+      </motion.button>
+      <motion.button
+      initial={{scaleX:1}}
+      whileHover={{scaleX:1.4}}
+      transition={{scaleX:{
+        type: "spring",
+        stiffness: 250,
+        damping: 10,
+        duration: 0.3,
+          }}}
         className="absolute top-1/2 right-5 transform -translate-y-1/2 p-2 cursor-pointer hover:text-white "
         onClick={nextSlide}
       >
-        <Image alt="Star logo" src={ArrowBlack} className="w-15 h-15 md:w-20 md:h-20 rotate-180 hover:scale-x-125 transition-all duration-200"/>
-      </button>
+        <Image alt="Star logo" src={ArrowBlack} className="w-15 h-15 md:w-20 md:h-20 rotate-180 "/>
+      </motion.button>
     </div>
   );
 }

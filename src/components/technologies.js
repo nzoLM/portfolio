@@ -30,7 +30,7 @@ export function Technologies() {
           }}}
       viewport={{ once: true, amount: 0.5 }}
       className="text-5xl lg:text-6xl py-20 lg:p-10 text-center lg:text-left">Technologies utilisées</motion.h1>
-      <ul className="grid grid-cols-2 lg:w-1/2 grow self-center gap-10">
+      <ul className="grid grid-cols-2 my-10 lg:w-1/2 grow self-center gap-10">
         {technologies.map((tech, index) => (
           <li key={index} className={`flex items-center justify-center relative ${tech.fullWidth ? 'col-span-2' : 'w-fit'}`}>
             <div className="relative flex items-center justify-center">

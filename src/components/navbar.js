@@ -83,11 +83,11 @@ export function Navbar() {
           </a>
         </div>
         <div className='text-xl'>
-          <div className='flex md:hidden' onClick={handleToggle}>
+          <div className='flex md:hidden cursor-pointer' onClick={handleToggle}>
             <motion.div 
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            whileHover={{ scale: 1.6 }} // hover plus subtil que x2, mais modifiable
+            whileHover={{ scale: 1.6 }}
             transition={{
               x: {
                 duration: 2,

@@ -179,12 +179,21 @@ export function Project(){
                 <motion.div initial={{opacity: 0, x: 50}}
                     whileInView={{opacity: 1, x: 0}}
                     animated={{opacity: 1, x:0}}
-                    transition={{x:{
+                    viewport={{ once: true, amount: 0.5 }}
+                    animate={{
+                        // Keyframes : définit les étapes de l'animation pour 'y'
+                        y: ["0%", "10%", "0%"],
+                      }}
+                      transition={{y:{
+                        duration: 5,
+                        repeat: Infinity,
+                        repeatType: "loop",
+                        ease: "easeInOut",
+                      },x:{
                         type: "spring",
                         damping: 10,
                         duration: 1,
                         }}}
-                    viewport={{ once: true, amount: 0.5 }}
                 className="hidden w-1/2 xl:flex justify-center items-center">
                     <Image alt="Star logo" src={Stars} className="self-center hover:fill-black "/>
                 </motion.div>

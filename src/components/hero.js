@@ -11,7 +11,7 @@ export function Hero(){
             animated={{opacity: 1, x:0}}
             transition={{duration: 1.5, bounce: 0.6, type: "spring"}}
             viewport={{ once: true, amount: 0.5 }}
-             className="w-1/2 lg:p-10 flex items-center justify-center ">
+             className="w-1/2 mb-10 lg:p-10 flex items-center justify-center ">
                 <motion.div className="w-full"
                     animate={{
                         // Keyframes : définit les étapes de l'animation pour 'y'
