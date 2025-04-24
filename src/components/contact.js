@@ -14,32 +14,32 @@ export function Contact(){
                 <div className="w-full flex justify-center text-center">
                     <ContactUs/>
                 </div>
-                <div className="text-2xl lg:w-1/2 lg:m-auto self-center text-left p-10">
-                    <ul className="flex lg:flex-col justify-around flex-wrap m-auto gap-5 w-fit">
+                <div className="text-2xl lg:w-1/2 lg:m-auto self-center p-10">
+                    <ul className="flex flex-col justify-around lg:items-left items-center flex-wrap m-auto gap-5 w-fit">
                         <motion.li transition={{
                         type: "spring",
                         stiffness: 300,
                         damping: 10,
                         duration: 0.3,
-                        }} whileHover={{scaleX : 1.5}} className="w-fit"><a href="https://github.com/nzoLM" className="flex gap-5"><FaGithub/>Github</a></motion.li>
+                        }} whileHover={{scaleX : 1.2}} className="w-fit"><a href="https://github.com/nzoLM" className="flex gap-5"><FaGithub/>Github</a></motion.li>
                         <motion.li transition={{
                         type: "spring",
                         stiffness: 300,
                         damping: 10,
                         duration: 0.3,
-                        }} whileHover={{scaleX : 1.5}} className="w-fit"><a className="flex gap-5" href="https://www.linkedin.com/in/enzo-le-moal"><FaLinkedinIn/>LinkedIn</a></motion.li>
+                        }} whileHover={{scaleX : 1.2}} className="w-fit"><a className="flex gap-5" href="https://www.linkedin.com/in/enzo-le-moal"><FaLinkedinIn/>LinkedIn</a></motion.li>
                         <motion.li transition={{
                         type: "spring",
                         stiffness: 300,
                         damping: 10,
                         duration: 0.3,
-                        }} whileHover={{scaleX : 1.3}} className="flex gap-2 "><a className="text-2xl" href="">lemoalenzo05@gmail.com</a></motion.li>
+                        }} whileHover={{scaleX : 1.2}} className="flex gap-2 "><a className="text-2xl" href="">lemoalenzo05@gmail.com</a></motion.li>
                         <motion.li transition={{
                         type: "spring",
                         stiffness: 300,
                         damping: 10,
                         duration: 0.3,
-                        }} whileHover={{scaleX : 1.5}} className="w-fit">Paris, France</motion.li>
+                        }} whileHover={{scaleX : 1.2}} className="w-fit">Paris, France</motion.li>
                     </ul>   
                 </div>  
             </div>

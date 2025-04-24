@@ -38,7 +38,7 @@ export function Technologies() {
               initial={{opacity: 0, x: -50}}
               whileInView={{opacity: 1, x: 0}}
               animated={{opacity: 1, x:0}}
-              viewport={{ once: true, amount: 0.5 }}
+              viewport={{ once: true, amount: 0.5}}
                 whileHover={{ rotate: 180, scale: 2 }}
                 whileTap={{ rotate: 180, scale: 0.95 }}
                 transition={{

@@ -112,7 +112,7 @@ export function Project(){
     ];
 
     return(
-        <div id="project" className="flex flex-col bg-[#A79EA1] min-h-screen  text-black md:gap-0 gap-10 overflow-hidden">
+        <div id="project" className="flex flex-col bg-[#A79EA1] min-h-screen pb-10 text-black md:gap-0 gap-10 overflow-hidden">
             <div className="flex justify-around md:my-5 my-10">
                 <motion.div initial={{opacity: 0, x: -50}}
                     whileInView={{opacity: 1, x: 0}}
