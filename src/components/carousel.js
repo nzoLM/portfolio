@@ -18,7 +18,7 @@ export function Carousel({ slides }) {
     <div className="relative w-full h-full max-w-3xl mx-auto overflow-hidden">
       <div className="relative flex h-full transition-all duration-500" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
         {slides.map((slide, index) => (
-          <div
+          <motion.div
             key={index}
             className={`relative w-full m-auto flex-shrink-0 transition-all duration-200 ${
               index === currentIndex ? "opacity-100 blur-none scale-x-100" : "opacity-0 blur-lg scale-x-150"
@@ -26,7 +26,7 @@ export function Carousel({ slides }) {
           >
             <h3 className="text-xl my-5">{index + 1} / {slides.length}</h3>
             {slide}
-          </div>
+          </motion.div>
         ))}
       </div>
       <motion.button
