@@ -18,16 +18,46 @@ export const ContactUs = () => {
           console.log('FAILED...', error.text);
         },
       );
-      e.target.reset();
+    e.target.reset();
   };
 
   return (
-    <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-10 lg:w-1/2">
-        <h1 className="text-4xl text-black p-10">Me contacter :</h1>
-        <input type="text" name='name' className="border-b border-black text-black text-2xl" placeholder="Nom" />
-        <input type="email" name='email' className="border-b border-black text-black text-2xl" placeholder="Email" />
-        <textarea type="text" name='message' className="border-b border-black text-black text-2xl h-[8em] resize-none   " placeholder="Écrivez votre message . . ." />
-        <input className="cursor-pointer w-fit border border-black self-center p-1" type="submit" value="Envoyer" />
+    <form
+      ref={form}
+      onSubmit={sendEmail}
+      className="flex flex-col gap-8 lg:w-1/2 p-8 bg-black/5"
+    >
+      <h1 className="text-4xl  text-black">Me contacter :</h1>
+
+      <input
+        type="text"
+        name="name"
+        placeholder="Nom"
+        className="border-b-2 border-black bg-transparent text-xl text-black placeholder-gray-500 focus:outline-none focus:border-white transition duration-300"
+        required
+      />
+
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        className="border-b-2 border-black bg-transparent text-xl text-black placeholder-gray-500 focus:outline-none focus:border-white transition duration-300"
+        required
+      />
+
+      <textarea
+        name="message"
+        placeholder="Écrivez votre message..."
+        className="border-b-2 border-black bg-transparent text-xl text-black placeholder-gray-500 h-32 resize-none focus:outline-none focus:border-white transition duration-300"
+        required
+      ></textarea>
+
+      <input
+        type="submit"
+        value="Envoyer"
+        className="self-center mt-4 px-6 py-2 border-double border-4 border-black text-black text-lg font-medium hover:bg-black hover:text-white transition duration-150 cursor-pointer"
+      />
     </form>
+
   );
 };
