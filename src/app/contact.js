@@ -1,3 +1,4 @@
+"use client";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { ContactUs } from "./email";

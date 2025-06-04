@@ -1,10 +1,11 @@
-import {Navbar} from "@/components/navbar";
-import {Hero} from "@/components/hero";
-import {Project} from "@/components/project";
-import {About} from "@/components/about";
-import { Technologies } from "@/components/technologies";
-import { Contact } from "@/components/contact";
-import {Footer} from "@/components/footer";
+"use client";
+import {Navbar} from "@/app/navbar";
+import {Hero} from "@/app/hero";
+import {Project} from "@/app/project";
+import {About} from "@/app/about";
+import { Technologies } from "@/app/technologies";
+import { Contact } from "@/app/contact";
+import {Footer} from "@/app/footer";
 
 export default function Home() {
   return (

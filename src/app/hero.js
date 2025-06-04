@@ -1,3 +1,4 @@
+"use client";
 import Star from "../../public/wide.svg";
 import Image from 'next/image';
 import {motion} from "motion/react";

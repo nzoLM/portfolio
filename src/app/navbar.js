@@ -1,3 +1,4 @@
+"use client";
 import Image from 'next/image';
 import CrossStar from '../../public/cross-star-white.svg';
 import HamburgerWhite from '../../public/HamburgerWhite.svg';

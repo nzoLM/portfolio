@@ -1,3 +1,4 @@
+"use client";
 // importer icones de technologies
 import { DiPhp, DiJavascript1 } from "react-icons/di";
 import { RiTailwindCssFill } from "react-icons/ri";
