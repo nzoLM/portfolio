@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 import React from "react";
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata = {
   title: "Enzo LE MOAL - DÉVELOPPEUR WEB FULLSTACK",
