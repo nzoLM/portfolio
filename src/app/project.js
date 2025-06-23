@@ -1,204 +1,122 @@
 "use client";
-// importer icones de technologies
 import { DiPhp, DiJavascript1 } from "react-icons/di";
-import { RiTailwindCssFill } from "react-icons/ri";
+import React from "react";
+import Star from "../../public/star-with-star-field.svg"
+import { RiTailwindCssFill, RiNextjsFill, RiNextjsLine } from "react-icons/ri";
 import { FaGithub, FaHtml5, FaCss3Alt } from "react-icons/fa";
 import Image from "next/image";
 import Stars from "../../public/stars.svg";
 import Ray2 from "../../public/ray2.svg";
-import {Carousel} from "./carousel";
-import {motion} from 'motion/react';
-export function Project(){
+import { motion } from 'motion/react';
 
-    const projects = [
-        <div key={0} className="gap-10 flex flex-col">
-            <div>
-                <h1 className="text-6xl">Tweet Academie</h1>
-            </div>
-                <div className="w-fit m-auto flex justify-center gap-5">
-                    <DiPhp className="text-5xl"/>
-                    <DiJavascript1 className="text-5xl" />
-                    <RiTailwindCssFill className="text-5xl"/>
-                </div>
-            <p className="text-2xl h-full text-center w-fit m-auto flex items-center justify-center">
-                Projet de groupe, 4 personnes, durée de 1 mois <br />
-                Reproduction des fonctionnalités de Twitter/X.
-            </p>
-            <motion.a whileHover={{ scale: 1.5 }}
-            whileTap={{ scale: 0.95 }} href="https://github.com/nzoLM/tweet-academie" className="w-fit self-center" target="_blank"><FaGithub className="text-5xl hover:fill-white transition-all duration-200"/></motion.a>
-            
-        </div>,
-        <div key={1} className="gap-10 flex flex-col">
-            <div >
-                <h1 className="text-6xl">My meetic</h1>
-            </div>
-                <div className="w-fit m-auto flex justify-center gap-5">
-                    <DiPhp className="text-5xl"/>
-                    <DiJavascript1 className="text-5xl" />
-                    <RiTailwindCssFill className="text-5xl"/>
-                </div>
-            <p className="text-2xl h-full text-center">
-                Projet solo, durée de 2 semaines<br/>
-                Reproduction des fonctionnalités d&apos;un site de rencontre.
-            </p>
-            <motion.a whileHover={{ scale: 1.5 }}
-            whileTap={{ scale: 0.95 }} href="https://github.com/nzoLM/my-meetic" className="w-fit self-center" target="_blank"><FaGithub className="text-5xl hover:fill-white transition-all duration-200"/></motion.a>
-        </div>,
-         <div key={2} className="gap-10 flex flex-col">
-         <div >
-             <h1 className="text-6xl">CSS Generator</h1>
-         </div>
-             <div className="w-fit m-auto flex justify-center gap-5">
-                 <DiPhp className="text-5xl"/>
-             </div>
-         <p className="text-2xl h-full text-center">
-             Projet solo, durée de 2 semaines<br/>
-            Génération d&apos;un sprite à partir de plusieures images.
-         </p>
-         <motion.a whileHover={{ scale: 1.5 }}
-            whileTap={{ scale: 0.95 }} href="https://github.com/nzoLM/css-generator" className="w-fit self-center" target="_blank"><FaGithub className="text-5xl hover:fill-white transition-all duration-200"/></motion.a>
-        </div>,
-        <div key={3} className="gap-10 flex flex-col">
-            <div >
-                <h1 className="text-6xl">Todo List</h1>
-            </div>
-                <div className="w-fit m-auto flex justify-center gap-5">
-                    <DiJavascript1 className="text-5xl"/>
-                    <FaCss3Alt className="text-5xl"/>
-                    <FaHtml5 className="text-5xl"/>
-                </div>
-            <p className="text-2xl h-full text-center">
-                Projet solo<br/>
-            To do List réalisé en auto didacte.
-            </p>
-            <motion.a whileHover={{ scale: 1.5 }}
-            whileTap={{ scale: 0.95 }} href="https://github.com/nzoLM/todo-list" className="w-fit self-center" target="_blank"><FaGithub className="text-5xl hover:fill-white transition-all duration-200"/></motion.a>
-            <a href="https://nzolm.github.io/todo-list/">Visit Website</a>
-       </div>,
-       <div key={4} className="gap-10 flex flex-col">
-        <div >
-            <h1 className="text-6xl">Morpion</h1>
-        </div>
-            <div className="w-fit m-auto flex justify-center gap-5">
-                <DiJavascript1 className="text-5xl"/>
-                <FaCss3Alt className="text-5xl"/>
-                <FaHtml5 className="text-5xl"/>
-            </div>
-        <p className="text-2xl h-full text-center">
-            Projet solo<br/>
-            Morpion réalisé en auto didacte.
-        </p>
-        <motion.a whileHover={{ scale: 1.5 }}
-            whileTap={{ scale: 0.95 }} href="https://github.com/nzoLM/tic-tac-toe" className="w-fit self-center" target="_blank"><FaGithub className="text-5xl hover:fill-white transition-all duration-200"/></motion.a>
-        <a href="https://nzolm.github.io/tic-tac-toe/">Visit Website</a>
-      </div>,
-      <div key={5} className="gap-10 flex flex-col">
-      <div >
-          <h1 className="text-6xl">Calculatrice</h1>
+const projectData = [
+    {
+  title: "Kords",
+  description: "Projet solo, plateforme type \"Letterboxd\" pour la musique : permet de lister, noter et commenter des albums ou morceaux favoris.",
+  icons: [
+    <RiNextjsFill className="text-5xl" key="nextjs"/>,
+    <RiTailwindCssFill className="text-5xl" key="tailwindcss"/>
+  ],
+  github: "https://github.com/nzoLM/Kords",
+  image: Stars,
+},
+  {
+    title: "Tweet Academie",
+    description: "Projet de groupe, 4 personnes, durée de 1 mois\nReproduction des fonctionnalités de Twitter/X.",
+    icons: [<DiPhp className="text-5xl" key="php"/>, <DiJavascript1 className="text-5xl" key="js"/>, <RiTailwindCssFill className="text-5xl" key="tw"/>],
+    github: "https://github.com/nzoLM/tweet-academie",
+    image: Stars, // Remplace par une image spécifique si besoin
+  },
+  {
+    title: "My meetic",
+    description: "Projet solo, durée de 2 semaines\nReproduction des fonctionnalités d'un site de rencontre.",
+    icons: [<DiPhp className="text-5xl" key="php"/>, <DiJavascript1 className="text-5xl" key="js"/>, <RiTailwindCssFill className="text-5xl" key="tw"/>],
+    github: "https://github.com/nzoLM/my-meetic",
+    image: Stars,
+  },
+  {
+    title: "Calculatrice",
+    description: "Projet solo\nCalculatrice réalisé en auto didacte.",
+    icons: [<DiJavascript1 className="text-5xl" key="js"/>, <FaCss3Alt className="text-5xl" key="css"/>, <FaHtml5 className="text-5xl" key="html"/>],
+    github: "https://github.com/nzoLM/odin-calculator",
+    website: "https://nzolm.github.io/odin-calculator/",
+    image: Stars,
+  },
+];
+
+export function Project() {
+  return (
+    <div id="project" className="flex flex-col bg-[#A79EA1] min-h-screen pb-10 text-black gap-10 overflow-x-hidden">
+      <div className="flex justify-around md:my-5 my-10">
+        <motion.div initial={{opacity: 0, x: -50}}
+          whileInView={{opacity: 1, x: 0}}
+          transition={{x:{type: "spring", damping: 10, duration: 1}}}
+          viewport={{ once: true, amount: 0.5 }}>
+          <Image alt="Arrow logo" src={Ray2}/>
+        </motion.div>
+        <motion.h1 
+          initial={{opacity: 0, y: -50}}
+          whileInView={{opacity: 1, y: 0}}
+          transition={{y:{type: "spring", damping: 10, duration: 1}}}
+          viewport={{ once: true, amount: 0.5 }}
+          className="text-4xl lg:text-6xl text-center md:h-fit self-center">Projets</motion.h1>
+        <motion.div
+          initial={{opacity: 0, x: 50}}
+          whileInView={{opacity: 1, x: 0}}
+          transition={{x:{type: "spring", damping: 10, duration: 1}}}
+          viewport={{ once: true, amount: 0.5 }}>
+          <Image alt="Arrow logo" src={Ray2} className="rotate-180"/>
+        </motion.div>
       </div>
-          <div className="w-fit m-auto flex justify-center gap-5">
-              <DiJavascript1 className="text-5xl"/>
-              <FaCss3Alt className="text-5xl"/>
-              <FaHtml5 className="text-5xl"/>
-          </div>
-      <p className="text-2xl h-full text-center">
-          Projet solo<br/>
-          Calculatrice réalisé en auto didacte.
-      </p>
-      
-      <motion.a whileHover={{ scale: 1.5 }}
-            whileTap={{ scale: 0.95 }} className="w-fit self-center" href="https://github.com/nzoLM/odin-calculator" target="_blank"><FaGithub className="text-5xl hover:fill-white transition-all duration-200"/></motion.a>
-      <a href="https://nzolm.github.io/odin-calculator/">Visit Website</a>
-    </div>,
-    ];
-
-    return(
-        <div id="project" className="flex flex-col bg-[#A79EA1] min-h-screen pb-10 text-black md:gap-0 gap-10 overflow-hidden">
-            <div className="flex justify-around md:my-5 my-10">
-                <motion.div initial={{opacity: 0, x: -50}}
-                    whileInView={{opacity: 1, x: 0}}
-                    animated={{opacity: 1, x:0}}
-                    transition={{x:{
-                        type: "spring",
-                        damping: 10,
-                        duration: 1,
-                        }}}
-                    viewport={{ once: true, amount: 0.5 }}>
-                    <Image alt="Arrow logo" src={Ray2}/>
-                </motion.div>
-                <motion.h1 
-                initial={{opacity: 0, y: -50}}
-                whileInView={{opacity: 1, y: 0}}
-                animated={{opacity: 1, y:0}}
-                transition={{y:{
-                    type: "spring",
-                    damping: 10,
-                    duration: 1,
-                    }}}
-                viewport={{ once: true, amount: 0.5 }}
-                className="text-4xl lg:text-6xl text-center md:h-fit self-center">Projets</motion.h1>
-                <motion.div
-                initial={{opacity: 0, x: 50}}
-                whileInView={{opacity: 1, x: 0}}
-                animated={{opacity: 1, x:0}}
-                transition={{x:{
-                    type: "spring",
-                    damping: 10,
-                    duration: 1,
-                    }}}
-                viewport={{ once: true, amount: 0.5 }}>
-                    <Image alt="Arrow logo" src={Ray2} className="rotate-180"/>
-                </motion.div>
+      <div className="flex flex-col gap-20">
+        {projectData.map((proj, i) => (
+          <React.Fragment key={proj.title}>
+            <div
+              className={`flex items-center justify-around gap-10 w-full  ${
+                i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+              }`}
+            >
+              <div className="md:w-1/2 w-full flex justify-center">
+                <Image src={proj.image} alt={proj.title + " image"} className="max-h-72 object-contain" />
+              </div>
+              <div className="md:w-1/2 w-full flex flex-col gap-4 items-center justify-center">
+                <h2 className="text-4xl font-bold">{proj.title}</h2>
+                <div className="flex gap-4">{proj.icons}</div>
+                <p className="text-xl whitespace-pre-line text-center">{proj.description}</p>
+                <div className="flex gap-4">
+                  <motion.a
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 0.95 }}
+                    href={proj.github}
+                    className="w-fit self-center"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaGithub className="text-3xl hover:fill-white transition-all duration-200"/>
+                  </motion.a>
+                  {proj.website && (
+                    <a
+                      href={proj.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-lg font-bold text-black hover:text-white transition"
+                    >
+                      Visit website
+                    </a>
+                  )}
+                </div>
+              </div>
             </div>
-            <motion.h1 
-            initial={{opacity: 0, y: 50}}
-            whileInView={{opacity: 1, y: 0}}
-            animated={{opacity: 1, y:0}}
-            transition={{y:{
-                type: "spring",
-                damping: 10,
-                duration: 1,
-                }}}
-            viewport={{ once: true, amount: 0.5 }}
-            className="lg:text-4xl text-2xl self-center">{projects.length} projets réalisés</motion.h1>
-            <div className="flex md:grow justify-center">
-                {/* Animation : rotation de plusieurs étoiles ici */}
-                {/* Afficher les projets en hover étoiles */}
-                
-                <motion.div initial={{opacity: 0, x: -50}}
-                    whileInView={{opacity: 1, x: 0}}
-                    animated={{opacity: 1, x:0}}
-                    transition={{x:{
-                        type: "spring",
-                        damping: 10,
-                        duration: 1,
-                        }}}
-                    viewport={{ once: true, amount: 0.5 }}
-                className="w-full z-10 flex flex-col text-center gap-10">
-                    <Carousel slides={projects}/>
-                </motion.div>
-                <motion.div initial={{opacity: 0, x: 50}}
-                    whileInView={{opacity: 1, x: 0}}
-                    animated={{opacity: 1, x:0}}
-                    viewport={{ once: true, amount: 0.5 }}
-                    animate={{
-                        // Keyframes : définit les étapes de l'animation pour 'y'
-                        y: ["0%", "10%", "0%"],
-                      }}
-                      transition={{y:{
-                        duration: 5,
-                        repeat: Infinity,
-                        repeatType: "loop",
-                        ease: "easeInOut",
-                      },x:{
-                        type: "spring",
-                        damping: 10,
-                        duration: 1,
-                        }}}
-                className="hidden w-1/2 xl:flex justify-center items-center">
-                    <Image alt="Star logo" src={Stars} className="self-center hover:fill-black "/>
-                </motion.div>
-            </div>
-        </div>
-    );
+            {/* Séparateur sauf après le dernier projet */}
+            {i < projectData.length - 1 && (
+              <div className="w-full flex justify-center">
+                {/* Ligne noire simple */}
+                <Image src={Star} className="h-16 w-full object-contain" />
+              </div>
+            )}
+          </React.Fragment>
+        ))}
+      </div>
+    </div>
+  );
 }
