@@ -8,14 +8,24 @@ export function Contact(){
 
 
     return(
-        <div className="bg-[url(../../public/Star-Field.png)] bg-cover text-black analogist">
+        <div className="bg-[url(../../public/Star-Field.png)] bg-cover text-black analogist overflow-x-hidden">
             <div className="bg-linear-to-b to-transparent from-black h-20"></div>
 
             <div id="contact" className='flex flex-col lg:flex-row justify-center items-center min-h-screen '>
-                <div className="w-full flex justify-center text-center">
+                <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{opacity: 1, x: 0}}
+                transition={{x:{type: "spring", damping: 10, duration: 1}}}
+                viewport={{ once: true, amount: 0.5 }}
+                 className="w-full flex justify-center text-center">
                     <ContactUs/>
-                </div>
-                <div className="text-2xl lg:w-1/2 lg:m-auto self-center p-10">
+                </motion.div>
+                <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{opacity: 1, x: 0}}
+                transition={{x:{type: "spring", damping: 10, duration: 1}}}
+                viewport={{ once: true, amount: 0.5 }}
+                 className="text-2xl lg:w-1/2 lg:m-auto self-center p-10">
                     <ul className="flex flex-col justify-around lg:items-left items-center flex-wrap m-auto gap-5 w-fit">
                         <motion.li transition={{
                         type: "spring",
@@ -42,7 +52,7 @@ export function Contact(){
                         duration: 0.3,
                         }} whileHover={{scaleX : 1.2}} className="w-fit">Paris, France</motion.li>
                     </ul>   
-                </div>  
+                </motion.div>  
             </div>
                   <div className="bg-linear-to-b from-transparent to-black h-40"></div>
             

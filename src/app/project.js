@@ -11,7 +11,7 @@ import { motion } from 'motion/react';
 
 const projectData = [
     {
-  title: "Kords",
+  title: "Kords (Work in progress)",
   description: "Projet solo, plateforme type \"Letterboxd\" pour la musique : permet de lister, noter et commenter des albums ou morceaux favoris.",
   icons: [
     <RiNextjsFill className="text-5xl" key="nextjs"/>,
@@ -68,18 +68,28 @@ export function Project() {
           <Image alt="Arrow logo" src={Ray2} className="rotate-180"/>
         </motion.div>
       </div>
-      <div className="flex flex-col gap-20">
+      <div className="flex flex-col justify-around">
         {projectData.map((proj, i) => (
           <React.Fragment key={proj.title}>
             <div
-              className={`flex items-center justify-around gap-10 w-full  ${
+              className={`flex flex-col items-center justify-around gap-10 w-full  ${
                 i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
               }`}
             >
-              <div className="md:w-1/2 w-full flex justify-center">
+              <motion.div 
+                initial={{ opacity: 0, x: i % 2 === 0 ? -50 : 50 }}
+                whileInView={{opacity: 1, x: 0}}
+                transition={{x:{type: "spring", damping: 10, duration: 1}}}
+                viewport={{ once: true, amount: 0.5 }}
+                className="md:w-1/2 w-full flex justify-center">
                 <Image src={proj.image} alt={proj.title + " image"} className="max-h-72 object-contain" />
-              </div>
-              <div className="md:w-1/2 w-full flex flex-col gap-4 items-center justify-center">
+              </motion.div>
+              <motion.div
+              initial={{ opacity: 0, x: i % 2 === 0 ? 50 : -50 }}
+                whileInView={{opacity: 1, x: 0}}
+                transition={{x:{type: "spring", damping: 10, duration: 1}}}
+                viewport={{ once: true, amount: 0.5 }}
+               className="md:w-1/2 w-full flex flex-col gap-4 items-center justify-center">
                 <h2 className="text-4xl font-bold">{proj.title}</h2>
                 <div className="flex gap-4">{proj.icons}</div>
                 <p className="text-xl whitespace-pre-line text-center">{proj.description}</p>
@@ -105,13 +115,19 @@ export function Project() {
                     </a>
                   )}
                 </div>
-              </div>
+              </motion.div>
             </div>
             {/* Séparateur sauf après le dernier projet */}
-            {i < projectData.length - 1 && (
-              <div className="w-full flex justify-center">
-                {/* Ligne noire simple */}
-                <Image src={Star} className="h-16 w-full object-contain" />
+            {(
+              <div className={`py-10 from-transparent to-[#937881]`}>
+              <motion.div
+                initial={{ opacity: 0, y: 0 }}
+                whileInView={{opacity: 1, y: 0}}
+                whileHover={{ scale: 1.5 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-fit h-fit m-auto">
+                <Image alt="Star icon separator" src={Star} className="h-16 w-fit object-contain" />
+              </motion.div>
               </div>
             )}
           </React.Fragment>
