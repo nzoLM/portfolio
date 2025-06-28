@@ -8,6 +8,7 @@ import { Contact } from "@/app/contact";
 import {Footer} from "@/app/footer";
 
 export default function Home() {
+  
   return (
     <div className="fontWacks bg-[#A79EA1] text-white">
         <Navbar/>
