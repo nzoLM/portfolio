@@ -37,7 +37,7 @@ export function Hero(){
                 viewport={{ once: true, amount: 0.5 }}>
                 <h2 className="text-5xl lg:text-7xl">DÉVELOPPEUR WEB - FULL STACK</h2>
                 {/* <p className="text-xl analogist">En recherche d&apos;alternance,<br /> Durée 14 mois,<br /> Rythme 3 semaines entreprise, 1 semaine formation</p> */}
-                <p className="text-xl">Born to be an artist, forced to be a developer. ╮( ˘ ､ ˘ )╭</p>
+                <p className="text-xl">Born to be an artist, forced to be a developer. <br /> ╮&#40; ˘ ､ ˘ &#41;╭</p>
             </motion.div>
         </div>
     )
