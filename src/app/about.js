@@ -21,7 +21,8 @@ export function About(){
     return(
         <div id="about" className="relative flex flex-col min-h-screen bg-black h-full overflow-hidden">
             <Image alt="Star-circle icon" src={Star} className="absolute w-full h-full p-5"/>
-            <div className="z-0 flex flex-col items-center align-center lg:w-1/2 h-screen self-center">
+            <div className="z-0 flex flex-col items-center align-center h-screen self-center">
+                <div className="flex flex-col justify-center items-center text-left h-screen gap-5 sm:gap-10 sm:p-10">
                 <motion.h1
                 initial={{opacity: 0, y: -50}}
                 whileInView={{opacity: 1, y: 0}}
@@ -32,8 +33,7 @@ export function About(){
                     duration: 2,
                     }}
                 viewport={{ once: true, amount: 0.5 }}
-                 className="text-6xl text-center pt-16">À PROPOS</motion.h1>
-                <div className="flex flex-col justify-center items-center text-center my-auto gap-5 sm:gap-10 sm:p-10">
+                 className="text-6xl w-full text-left p-8">Mon parcours</motion.h1>
                     <motion.p
                     initial={{opacity: 0, x: 50}}
                     whileInView={{opacity: 1, x: 0}}
@@ -44,9 +44,9 @@ export function About(){
                         duration: 1,
                         }}
                     viewport={{ once: true, amount: 0.5 }}
-                     className="text-xl lg:text-2xl self-center leading-10">
-                    Bonjour, je suis Enzo LE MOAL, développeur web en formation à la Web@cadémie by Epitech.  
-                    Passionné par la programmation après un bac en maths et NSI, j&apos;ai tenté une licence maths-info,
+                     className="text-2xl lg:text-3xl self-center leading-10">
+                    Je m'appelle Enzo LE MOAL, développeur web en formation à la Web@cadémie by Epitech.  
+                    Après un baccalauréat en spécialité maths et NSI, j&apos;ai tenté une licence maths-info,
                     mais l&apos;approche ne me convenait pas. 
                     Après deux ans d&apos;échecs, j&apos;ai décidé d&apos;apprendre le développement web par moi-même, et c&apos;est pour cette raison que je me retrouve actuellement ici dans cette formation.
                     </motion.p>
@@ -64,6 +64,37 @@ export function About(){
                         <a id="cv-link" href="files/CV.pdf" download="EnzoLeMoal.pdf" className="z-100 flex gap-5 items-center text-lg lg:text-2xl cursor-pointer bg-transparent"><Image src={WhiteStar} alt="Star  logo" height={50}/>Télécharger mon CV<Image src={WhiteStar} alt="Star logo" height={50}/></a>
                         <div id="cv-bg" className="-z-10 w-full h-full top-0 left-0 absolute bg-[#A79EA1] scale-y-0 transition"></div>
                     </motion.div>
+                </div>
+                <div>
+                </div>
+            </div>
+            <div className="z-0 flex flex-col items-center align-center self-center">
+                <div className="flex flex-col justify-center items-center text-left my-auto gap-5 sm:gap-10 sm:p-10">
+                <motion.h1
+                initial={{opacity: 0, y: -50}}
+                whileInView={{opacity: 1, y: 0}}
+                animated={{opacity: 1, y:0}}
+                transition={{
+                    type: "spring",
+                    damping: 10,
+                    duration: 2,
+                    }}
+                viewport={{ once: true, amount: 0.5 }}
+                 className="text-6xl w-full text-right p-8">Un morceau de moi...</motion.h1>
+                    <motion.p
+                    initial={{opacity: 0, x: 50}}
+                    whileInView={{opacity: 1, x: 0}}
+                    animated={{opacity: 1, x:0}}
+                    transition={{
+                        type: "spring",
+                        damping: 10,
+                        duration: 1,
+                        }}
+                    viewport={{ once: true, amount: 0.5 }}
+                     className="text-xl lg:text-2xl text-right self-center leading-10">
+                    Depuis petit je suis de nature créative, imaginative, je dessinais souvent, habitude que j'ai gardé malgré que ça n'arrive que rarement.
+                    Ensuite je me suis tourné petit à petit vers la musique, c'est probablement la chose que j'aime le plus, donc j'ai décidé de commencer à apprendre à jouer de la guitare (électrique).
+                    </motion.p>
                 </div>
                 <div>
                 </div>

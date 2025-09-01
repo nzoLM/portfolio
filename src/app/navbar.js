@@ -47,7 +47,7 @@ export function Navbar() {
     transition={{y:{ type: "spring", stiffness: 100, damping: 12 }}}
     className="fixed top-0 left-0 w-full h-46 lg:h-fit z-50"
     >
-      <div className='flex relative items-center p-10 bg-gradient-to-b from-[#A79EA1] to-transparent gap-5 w-full text-white justify-between'>
+      <div className='flex relative items-center p-10 bg-gradient-to-b from-black to-transparent gap-5 w-full text-white justify-between'>
         <div className="lg:w-96">
           <motion.h1 initial={{opacity: 0, x: -50}}
                 whileInView={{opacity: 1, x: 0}}

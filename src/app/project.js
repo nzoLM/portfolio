@@ -26,7 +26,7 @@ const projectData = [
   icons: [
     <RiReactjsFill className="text-5xl" key="nextjs"/>,
     <RiTailwindCssFill className="text-5xl" key="tailwindcss"/>,
-    <FaDocker className="text-5xl" key="tailwindcss"/>
+    <FaDocker className="text-5xl" key="docker"/>
   ],
   github: "https://github.com/nzoLM/Kords",
   website : "https://kords-social.vercel.app/",
