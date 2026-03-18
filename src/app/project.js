@@ -12,7 +12,7 @@ import { motion } from 'motion/react';
 const projectData = [
     {
   title: "Kords (Work in progress)",
-  description: "Projet solo, plateforme type \"Letterboxd\" pour la musique : permet de lister, noter et commenter des albums ou morceaux favoris.",
+  description: "Projet solo, plateforme communautaire pour les guitaristes.",
   icons: [
     <RiNextjsFill className="text-5xl" key="nextjs"/>,
     <RiTailwindCssFill className="text-5xl" key="tailwindcss"/>
