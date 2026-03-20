@@ -1,51 +1,56 @@
 @import "tailwindcss";
 
+@theme {
+  --background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-foreground-secondary: var(--foreground-secondary);
+  --color-primary: var(--primary);
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  scroll-behavior: smooth;
+    --color-foreground: #ffffff;
+    --foreground-secondary : #ffffff;
+    --background: #171717;
+    --primary: #A79EA1;
+    /* --primary: #2E073F; */
+    scroll-behavior: smooth;
 }
 
 @font-face {
-  font-family: 'fontWacks';
-  src: url('FashionWacks-Regular.ttf');
+    font-family: 'fontWacks';
+    src: url('FashionWacks-Regular.ttf');
 }
 
 .fontWacks {
-  font-family: 'fontWacks';
+    font-family: 'fontWacks';
 }
+
 @font-face {
-  font-family: 'Analogist';
-  src: url('Analogist.otf');
+    font-family: 'Analogist';
+    src: url('Analogist.otf');
 }
 
 .analogist {
-  font-family: 'Analogist';
+    font-family: 'Analogist';
 }
 
-p{
-  font-family: 'Analogist';
+p {
+    font-family: 'Analogist';
 }
 
-.text-shadow-black{
-  text-shadow: #000000 2px 2px 4px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.text-shadow-black {
+    text-shadow: #000000 2px 2px 4px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* @keyframes twinkLing */
 
-input, textarea{
-  outline: none;
+input,
+textarea {
+    outline: none;
 }
