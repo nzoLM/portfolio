@@ -48,7 +48,7 @@ export function About() {
                         Je m&apos;appelle Enzo LE MOAL, d&eacute;veloppeur web en formation &agrave; la Web@cad&eacute;mie by Epitech.<br />
                         Apr&egrave;s un baccalaur&eacute;at, j&apos;ai tent&eacute; une licence Math&eacute;matiques et Informatique,
                         mais l&apos;approche ne me convenait pas.<br />
-                        Durant cette licence je me suis form&eacute; en autodidacte au d&eacute;veloppement web, puis j'ai quitt&eacute; la fac pour rejoindre ma formation actuelle.
+                        Durant cette licence je me suis form&eacute; en autodidacte au d&eacute;veloppement web, puis j&apos;ai quitt&eacute; la fac pour rejoindre ma formation actuelle.
                     </motion.p>
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
@@ -77,7 +77,7 @@ export function About() {
                         }}
                         viewport={{ once: true, amount: 0.5 }}
                         className="w-full text-2xl lg:text-3xl text-left leading-10 ">
-                        En dehors de tout &ccedil;a j'adore la musique,<br /> je suis fan de Pink Floyd et je pratique de la guitare &eacute;lectrique.
+                        En dehors de tout &ccedil;a j&apos;adore la musique,<br /> je suis fan de Pink Floyd et je pratique de la guitare &eacute;lectrique.
                     </motion.p>
                 </div>
             </div>
