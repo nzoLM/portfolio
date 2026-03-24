@@ -97,7 +97,7 @@ export function Project() {
                 className="md:w-1/2 w-full flex flex-col gap-4 items-center justify-center">
                 <h2 className="text-4xl font-bold">{proj.title}</h2>
                 <div className="flex gap-4">{proj.icons}</div>
-                <p className="text-xl whitespace-pre-line text-center">{proj.description}</p>
+                <p className="text-xl whitespace-pre-line text-center font-bold">{proj.description}</p>
                 <div className="flex gap-4">
                   <motion.a
                     whileHover={{ scale: 1.2 }}
