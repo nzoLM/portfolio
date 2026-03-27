@@ -29,19 +29,21 @@ const projectData = [
       <RiTailwindCssFill className="text-5xl" key="tailwindcss" />,
       <FaDocker className="text-5xl" key="docker" />
     ],
-    github: "",
+    github: "https://github.com/nzoLM/e-commerce",
     image: Stars,
   },
    {
     title: '"LavanVids" / Previously-on',
     description: "Projet de groupe, 2 personnes, projet visant à suivre la progression sur les séries consultées. Ce remake est développé en Svelte, avec Tailwind CSS pour le design et en utilisant l'API de BetaSeries",
     icons: [<DiJavascript1 className="text-5xl" key="js" />, <RiTailwindCssFill className="text-5xl" key="tw" />],
+    github: "https://github.com/nzoLM/LavanVids",
     image: Stars, // Remplace par une image spécifique si besoin
   },
   {
     title: 'MyIRC',
     description: "Projet de groupe à 2 personnes\nProjet d'app de messagerie instantanée avec l'utilisation des socket en Javascript",
     icons: [<DiJavascript1 className="text-5xl" key="js" />],
+    github:"https://github.com/nzoLM/my-irc",
     image: Stars, // Remplace par une image spécifique si besoin
   },
   // {
@@ -126,7 +128,7 @@ export function Project() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <FaGithub className="text-3xl hover:fill-white transition-all duration-200" />
+                    <FaGithub className="cursor-pointer text-3xl hover:fill-white transition-all duration-200" />
                   </motion.a>
                   {proj.website && (
                     <a
