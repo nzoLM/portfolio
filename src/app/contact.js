@@ -25,7 +25,7 @@ export function Contact() {
                     transition={{ x: { type: "spring", damping: 10, duration: 1 } }}
                     viewport={{ once: true, amount: 0.5 }}
                     className="text-2xl lg:w-1/2 lg:m-auto self-center p-10">
-                    <ul className="flex flex-col justify-around lg:items-left items-center flex-wrap m-auto gap-5 w-fit">
+                    <ul className="flex flex-col justify-around lg:items-left items-center flex-wrap m-auto gap-5 w-fit font-bold">
                         <motion.li transition={{
                             type: "spring",
                             stiffness: 300,
