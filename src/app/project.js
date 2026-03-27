@@ -46,18 +46,17 @@ const projectData = [
     github:"https://github.com/nzoLM/my-irc",
     image: Stars, // Remplace par une image spécifique si besoin
   },
-  // {
-  //   title: "Spotify",
-  //   description: "Projet de groupe, 2 personnes, durée de 1 semaine,\n Clone de spotify avec utilisation d'une api via Docker.",
-  //   icons: [
-  //     <RiReactjsFill className="text-5xl" key="nextjs" />,
-  //     <RiTailwindCssFill className="text-5xl" key="tailwindcss" />,
-  //     <FaDocker className="text-5xl" key="docker" />
-  //   ],
-  //   github: "https://github.com/nzoLM/Kords",
-  //   website: "https://kords-social.vercel.app/",
-  //   image: Stars,
-  // },
+  {
+    title: "My Quizz",
+    description: "Projet de groupe, 3 personnes, durée de 2 semaines,\n Plateforme de quizz, avec création de quizz.",
+    icons: [
+      <RiReactjsFill className="text-5xl" key="nextjs" />,
+      <RiTailwindCssFill className="text-5xl" key="tailwindcss" />,
+      <FaDocker className="text-5xl" key="docker" />
+    ],
+    github: "https://github.com/nzoLM/my_quizz",
+    image: Stars,
+  },
   {
     title: "Twitter clone",
     description: "Projet de groupe, 4 personnes, durée de 1 mois\nReproduction des fonctionnalités de Twitter/X.",
