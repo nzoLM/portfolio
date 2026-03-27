@@ -2,7 +2,7 @@
 import { DiPhp, DiJavascript1 } from "react-icons/di";
 import React from "react";
 import Star from "../../public/star-with-star-field.svg"
-import { RiTailwindCssFill, RiNextjsFill, RiNextjsLine, RiReactjsFill } from "react-icons/ri";
+import { RiTailwindCssFill, RiNextjsFill, RiNextjsLine, RiReactjsFill, RiSvelteFill } from "react-icons/ri";
 import { FaGithub, FaHtml5, FaCss3Alt, FaDocker, FaNode } from "react-icons/fa";
 import Image from "next/image";
 import Stars from "../../public/stars.svg";
@@ -35,7 +35,7 @@ const projectData = [
    {
     title: '"LavanVids" / Previously-on',
     description: "Projet de groupe, 2 personnes, projet visant à suivre la progression sur les séries consultées. Ce remake est développé en Svelte, avec Tailwind CSS pour le design et en utilisant l'API de BetaSeries",
-    icons: [<DiJavascript1 className="text-5xl" key="js" />, <RiTailwindCssFill className="text-5xl" key="tw" />],
+    icons: [<DiJavascript1 className="text-5xl" key="js" />, <RiTailwindCssFill className="text-5xl" key="tw" />, <RiSvelteFill className="text-5xl" key="svelte"/>],
     github: "https://github.com/nzoLM/LavanVids",
     image: Stars, // Remplace par une image spécifique si besoin
   },
