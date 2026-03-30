@@ -11,7 +11,7 @@ import {Footer} from "@/app/footer";
 export default function Home() {
   
   return (
-    <div className="fontWacks bg-primary ">
+    <div className="fontWacks bg-primary overflow-hidden">
         <Navbar/>
       <div id="top" className="min-h-screen flex flex-col text-black">
         <div className="h-48 lg:h-[128px]"></div>
