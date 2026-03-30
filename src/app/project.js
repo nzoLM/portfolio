@@ -3,7 +3,7 @@ import { DiPhp, DiJavascript1 } from "react-icons/di";
 import React from "react";
 import Star from "../../public/star-with-star-field.svg"
 import { RiTailwindCssFill, RiNextjsFill, RiNextjsLine, RiReactjsFill, RiSvelteFill } from "react-icons/ri";
-import { FaGithub, FaHtml5, FaCss3Alt, FaDocker, FaNode } from "react-icons/fa";
+import { FaGithub, FaHtml5, FaCss3Alt, FaDocker, FaNode, FaSymfony } from "react-icons/fa";
 import Image from "next/image";
 import Stars from "../../public/stars.svg";
 import Ray2 from "../../public/ray2.svg";
@@ -26,8 +26,8 @@ const projectData = [
     description: "Projet de groupe, 4 personnes, durée de 6 semaines, plateforme e-commerce de vente de chaussures",
     icons: [
       <RiReactjsFill className="text-5xl" key="nextjs" />,
-      <RiTailwindCssFill className="text-5xl" key="tailwindcss" />,
-      <FaDocker className="text-5xl" key="docker" />
+      <FaSymfony  className="text-5xl" key="symfony" />,
+      <RiTailwindCssFill className="text-5xl" key="tailwindcss" />
     ],
     github: "https://github.com/nzoLM/e-commerce",
     image: Stars,
@@ -51,8 +51,8 @@ const projectData = [
     description: "Projet de groupe, 3 personnes, durée de 2 semaines,\n Plateforme de quizz, avec création de quizz.",
     icons: [
       <RiReactjsFill className="text-5xl" key="nextjs" />,
+      <FaSymfony className="text-5xl" key="symfony"/>,
       <RiTailwindCssFill className="text-5xl" key="tailwindcss" />,
-      <FaDocker className="text-5xl" key="docker" />
     ],
     github: "https://github.com/nzoLM/my_quizz",
     image: Stars,

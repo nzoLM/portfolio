@@ -33,7 +33,7 @@ export function About() {
                             duration: 2,
                         }}
                         viewport={{ once: true, amount: 0.5 }}
-                        className="text-6xl w-full text-left p-8">Mon parcours</motion.h2>
+                        className="text-6xl w-full text-left p-8">&Agrave; propos</motion.h2>
                     <motion.p
                         initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -46,9 +46,10 @@ export function About() {
                         viewport={{ once: true, amount: 0.5 }}
                         className="text-2xl lg:text-3xl self-center leading-10">
                         Je m&apos;appelle Enzo LE MOAL, d&eacute;veloppeur web en formation &agrave; la Web@cad&eacute;mie by Epitech.<br />
-                        Apr&egrave;s un baccalaur&eacute;at, j&apos;ai tent&eacute; une licence Math&eacute;matiques et Informatique,
+                        Apr&egrave;s un baccalaur&eacute;at ( sp&eacute;cialit&eacute;s math&eacute;matiques et NSI ), j&apos;ai tent&eacute; une licence Math&eacute;matiques et Informatique,
                         mais l&apos;approche ne me convenait pas.<br />
-                        Durant cette licence je me suis form&eacute; en autodidacte au d&eacute;veloppement web, apr&egrave;s avoir &eacute;chou&eacute; 2 fois ma premi&egrave;re ann&eacute;e, j&apos;ai quitt&eacute; la fac pour rejoindre ma formation actuelle.
+                        Durant cette licence je me suis form&eacute; en autodidacte au d&eacute;veloppement web, apr&egrave;s avoir &eacute;chou&eacute;
+                         2 fois ma premi&egrave;re ann&eacute;e, j&apos;ai quitt&eacute; la fac pour rejoindre ma formation actuelle.
                     </motion.p>
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
@@ -66,6 +67,17 @@ export function About() {
                         <a id="cv-link" href="files/CV.pdf" download="EnzoLeMoal.pdf" className="z-100 flex gap-5 items-center text-lg lg:text-2xl cursor-pointer bg-transparent"><Image src={WhiteStar} alt="Star  logo" height={50} />T&eacute;l&eacute;charger mon CV<Image src={WhiteStar} alt="Star logo" height={50} /></a>
                         <div id="cv-bg" className="-z-10 w-full h-full top-0 left-0 absolute bg-primary scale-y-0 transition"></div>
                     </motion.div>
+                    <motion.h2
+                        initial={{ opacity: 0, y: -50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        animated={{ opacity: 1, y: 0 }}
+                        transition={{
+                            type: "spring",
+                            damping: 10,
+                            duration: 2,
+                        }}
+                        viewport={{ once: true, amount: 0.5 }}
+                        className="text-6xl w-full text-right p-8">Mes passions</motion.h2>
                     <motion.p
                         initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -76,8 +88,9 @@ export function About() {
                             duration: 1,
                         }}
                         viewport={{ once: true, amount: 0.5 }}
-                        className="w-full text-2xl lg:text-3xl text-left leading-10 ">
-                        En dehors de tout &ccedil;a j&apos;adore la musique,<br /> je suis fan de Pink Floyd et je pratique de la guitare &eacute;lectrique.
+                        className="w-full text-2xl lg:text-3xl text-right leading-10 ">
+                        En dehors de tout &ccedil;a j&apos;&eacute;coute beaucoup de musique, c&apos;est ma plus grande passion et j&apos;ai m&ecirc;me commenc&eacute; &agrave; jouer de la guitare &eacute;lectrique.<br />
+                        Je suis un grand fan de rap, de rock, de metal, et tous les sous-genres que je ne vais pas citer. Mais je peux &eacute;couter tout et n&apos;importe quoi, je ne me ferme pas &agrave; d&apos;autres horizons.
                     </motion.p>
                 </div>
             </div>
