@@ -40,6 +40,7 @@ export function Hero(){
                 <p className="text-2xl text-right font-bold">╮&#40; ˘ ､ ˘ &#41;╭</p> */}
                 <p className="text-2xl lg:text-right text-center font-bold" >Conception et développement full stack | Applications & Sites Web</p>
                 <p className="text-2xl lg:text-right text-center font-bold" >Créations de solutions web</p>
+                <p className="text-xl lg:text-right text-center font-bold" >I would have liked to make art, but unfortunately <span className="google-sans-code italic ">I beep-boop</span></p>
             </motion.div>
         </div>
     )

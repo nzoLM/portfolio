@@ -19,7 +19,7 @@ export function About() {
     })
 
     return (
-        <div id="about" className="relative flex flex-col min-h-screen text-foreground-secondary bg-black h-full overflow-hidden">
+        <div id="about" className="relative flex flex-col min-h-screen text-foreground-secondary bg-black h-full ">
             <Image alt="Star-circle icon" src={Star} className="absolute w-full h-full p-5" />
             <div className="z-0 flex flex-col items-center align-center h-screen self-center">
                 <div className="flex flex-col justify-center items-center text-left h-screen gap-5 sm:gap-10 sm:p-10">
