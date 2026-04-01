@@ -19,21 +19,19 @@ export function About() {
     })
 
     return (
-        <div id="about" className="relative flex flex-col min-h-screen text-foreground-secondary bg-black h-full">
-            <Image alt="Star-circle icon" src={Star} className="absolute w-full h-full p-5" />
-            <div className="z-0 flex flex-col items-center align-center h-screen self-center ">
-                <div className="flex flex-col justify-center items-center text-left h-screen gap-5 sm:gap-10 sm:p-10">
-                    <motion.h2
-                        initial={{ opacity: 0, y: -50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        animated={{ opacity: 1, y: 0 }}
-                        transition={{
-                            type: "spring",
-                            damping: 10,
-                            duration: 2,
-                        }}
-                        viewport={{ once: true, amount: 0.5 }}
-                        className="text-6xl w-full text-left p-8">&Agrave; propos</motion.h2>
+        <div id="about" className="relative flex flex-col text-foreground-secondary bg-black w-full">            <Image alt="Star-circle icon" src={Star} className="absolute w-full h-full p-5" />
+            <div className="z-0 flex flex-col items-center align-center self-center">
+                <div className="flex flex-col justify-center items-center text-left gap-5 sm:gap-10 sm:p-10 py-20">                    <motion.h2
+                    initial={{ opacity: 0, y: -50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    animated={{ opacity: 1, y: 0 }}
+                    transition={{
+                        type: "spring",
+                        damping: 10,
+                        duration: 2,
+                    }}
+                    viewport={{ once: true, amount: 0.5 }}
+                    className="text-6xl w-full text-left p-8">&Agrave; propos</motion.h2>
                     <motion.p
                         initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -49,7 +47,7 @@ export function About() {
                         Apr&egrave;s un baccalaur&eacute;at ( sp&eacute;cialit&eacute;s math&eacute;matiques et NSI ), j&apos;ai tent&eacute; une licence Math&eacute;matiques et Informatique,
                         mais l&apos;approche ne me convenait pas.<br />
                         Durant cette licence je me suis form&eacute; en autodidacte au d&eacute;veloppement web, apr&egrave;s avoir &eacute;chou&eacute;
-                         2 fois ma premi&egrave;re ann&eacute;e, j&apos;ai quitt&eacute; la fac pour rejoindre ma formation actuelle.
+                        2 fois ma premi&egrave;re ann&eacute;e, j&apos;ai quitt&eacute; la fac pour rejoindre ma formation actuelle.
                     </motion.p>
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
@@ -114,8 +112,8 @@ export function About() {
                         }}
                         viewport={{ once: true, amount: 0.5 }}
                         className="w-full text-2xl lg:text-3xl text-left leading-10 ">
-                            Je suis actuellement en 2 ème année de mon diplôme bac+2 - Développeur / Intégrateur web, et occupe un poste de développeur Back-end en alternance.
-                        </motion.p>
+                        Je suis actuellement en 2 ème année de mon diplôme bac+2 - Développeur / Intégrateur web, et occupe un poste de développeur Back-end en alternance.
+                    </motion.p>
                 </div>
             </div>
         </div>
