@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import CrossStar from '../../public/cross-star-white.svg';
 import HamburgerWhite from '../../public/HamburgerWhite.svg';
+import {RiMenu4Fill} from 'react-icons/ri';
 import { motion, AnimatePresence } from "motion/react";
 import { useState, useEffect } from 'react';
 
@@ -43,18 +44,18 @@ export function Navbar() {
 
   return (
     <motion.nav
-      animate={hasScrolledOnce ? { y: showNavbar ? -15 : -150 } : { y: 0 }}
+      animate={hasScrolledOnce ? { y: showNavbar ? -12 : -150 } : { y: 0 }}
       transition={{ y: { type: "spring", stiffness: 100, damping: 12 } }}
       className="fixed top-0 left-0 w-full h-46 lg:h-fit z-50"
     >
-      <div className='flex relative items-center p-10 bg-gradient-to-b from-black to-transparent gap-5 w-full text-foreground-secondary justify-between'>
+      <div className='flex relative items-center p-4 sm:p-10 bg-linear-to-b from-black to-transparent gap-5 w-full text-foreground-secondary justify-between'>
         <div className="lg:w-96">
           <motion.h1 initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             animated={{ opacity: 1, x: 0 }}
             transition={{ duration: 2, bounce: 0.6, type: "spring" }}
             viewport={{ once: true, amount: 0.5 }}
-            className='text-3xl lg:text-5xl text-center sm:w-full w-20'>ENZO LE MOAL</motion.h1>
+            className='text-xl sm:text-3xl lg:text-5xl text-center sm:w-full w-20'>ENZO LE MOAL</motion.h1>
         </div>
         <div className='absolute left-1/2 -translate-x-1/2 m-auto'>
           <a href="#top" onClick={() => setIsOpen(false)}>
@@ -83,7 +84,7 @@ export function Navbar() {
 
           </a>
         </div>
-        <div className='text-xl'>
+        <div className='text-sm sm:text-lg md:text-xl'>
           <div className='flex md:hidden cursor-pointer' onClick={handleToggle}>
             <motion.div
               initial={{ opacity: 0, x: 50 }}
@@ -104,8 +105,8 @@ export function Navbar() {
                 },
               }}
               viewport={{ once: true, amount: 0.5 }}
-              className='w-20 h-20' >
-              <Image alt='Hamburger icon' className='self-center w-full h-full' src={HamburgerWhite} />
+              className='w-18 h-18' >
+              <RiMenu4Fill alt='Menu icon' className='self-center w-full h-full'/>
             </motion.div>
           </div>
           <motion.div
@@ -114,7 +115,7 @@ export function Navbar() {
             animated={{ opacity: 1, x: 0 }}
             transition={{ duration: 2, bounce: 0.6, type: "spring" }}
             viewport={{ once: true, amount: 0.5 }}
-            className="hidden md:flex md:gap-5 lg:gap-10 lg:text-2xl text-center">
+            className="hidden md:flex md:gap-3 lg:gap-10 lg:text-2xl text-sm md:text-base text-center">
             <ul className="flex gap-3 justify-between sm:justify-around">
               <li className='hover:text-white/50 transition'><a href="#about">À propos</a></li>
               <li className='hover:text-white/50 transition'><a href="#contact">Contacts</a></li>
@@ -130,12 +131,12 @@ export function Navbar() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 20 }}
               transition={{ duration: 0.5, bounce: 0.6, type: "spring" }}
-              className='absolute top-full right-0 w-fit max-h-screen pl-10 p-10 pr-0 z-10'
+              className='absolute top-full right-0 w-fit max-h-screen p-4 pr-0 sm:pl-10 sm:p-10 z-10'
             >
-              <ul className="flex flex-col gap-3 text-right text-2xl text-white w-80">
-                <li onClick={handleToggle} className='hover:text-black transition bg-gradient-to-l from-[#7c7672] to-transparent'><a className='block w-full p-5' href="#about">About</a></li>
-                <li onClick={handleToggle} className='hover:text-black transition bg-gradient-to-l from-[#7c7672] to-transparent'><a className='block w-full p-5' href="#contact">Contacts</a></li>
-                <li onClick={handleToggle} className='hover:text-black transition bg-gradient-to-l from-[#7c7672] to-transparent'><a className='block w-full p-5' href="#project">Projets</a></li>
+              <ul className="flex flex-col gap-3 text-right text-base sm:text-lg lg:text-2xl text-white w-fit sm:w-80">
+                <li onClick={handleToggle} className='hover:text-black transition bg-gradient-to-l from-[#7c7672] to-transparent'><a className='block w-full p-2 sm:p-5' href="#about">About</a></li>
+                <li onClick={handleToggle} className='hover:text-black transition bg-gradient-to-l from-[#7c7672] to-transparent'><a className='block w-full p-2 sm:p-5' href="#contact">Contacts</a></li>
+                <li onClick={handleToggle} className='hover:text-black transition bg-gradient-to-l from-[#7c7672] to-transparent'><a className='block w-full p-2 sm:p-5' href="#project">Projets</a></li>
               </ul>
             </motion.div>
           )}

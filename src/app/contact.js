@@ -24,32 +24,32 @@ export function Contact() {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ x: { type: "spring", damping: 10, duration: 1 } }}
                     viewport={{ once: true, amount: 0.5 }}
-                    className="text-2xl lg:w-1/2 lg:m-auto self-center p-10">
+                    className="text-sm sm:text-base lg:text-2xl lg:w-1/2 lg:m-auto self-center p-4 sm:p-10">
                     <ul className="flex flex-col justify-around lg:items-left items-center flex-wrap m-auto gap-5 w-fit font-bold">
                         <motion.li transition={{
                             type: "spring",
                             stiffness: 300,
                             damping: 10,
                             duration: 0.3,
-                        }} whileHover={{ scaleX: 1.2 }} className="w-fit"><a href="https://github.com/nzoLM" className="flex gap-5"><FaGithub />Github</a></motion.li>
+                        }} whileHover={{ scaleX: 1.2 }} className="w-fit"><a href="https://github.com/nzoLM" className="flex gap-2 sm:gap-5 text-sm sm:text-base"><FaGithub />Github</a></motion.li>
                         <motion.li transition={{
                             type: "spring",
                             stiffness: 300,
                             damping: 10,
                             duration: 0.3,
-                        }} whileHover={{ scaleX: 1.2 }} className="w-fit"><a className="flex gap-5" href="https://www.linkedin.com/in/enzo-le-moal"><FaLinkedinIn />LinkedIn</a></motion.li>
+                        }} whileHover={{ scaleX: 1.2 }} className="w-fit"><a className="flex gap-2 sm:gap-5 text-sm sm:text-base" href="https://www.linkedin.com/in/enzo-le-moal"><FaLinkedinIn />LinkedIn</a></motion.li>
                         <motion.li transition={{
                             type: "spring",
                             stiffness: 300,
                             damping: 10,
                             duration: 0.3,
-                        }} whileHover={{ scaleX: 1.2 }} className="flex gap-2 "><a className="text-2xl" href="mailto:lemoalenzo05@gmail.com">lemoalenzo05@gmail.com</a></motion.li>
+                        }} whileHover={{ scaleX: 1.2 }} className="flex gap-2 "><a className="text-base sm:text-lg lg:text-2xl" href="mailto:lemoalenzo05@gmail.com">lemoalenzo05@gmail.com</a></motion.li>
                         <motion.li transition={{
                             type: "spring",
                             stiffness: 300,
                             damping: 10,
                             duration: 0.3,
-                        }} whileHover={{ scaleX: 1.2 }} className="w-fit">Paris, France</motion.li>
+                        }} whileHover={{ scaleX: 1.2 }} className="w-fit text-sm sm:text-base">Paris, France</motion.li>
                     </ul>
                 </motion.div>
             </div>

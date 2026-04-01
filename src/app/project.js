@@ -83,7 +83,7 @@ export function Project() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ y: { type: "spring", damping: 10, duration: 1 } }}
           viewport={{ once: true, amount: 0.5 }}
-          className="text-4xl lg:text-6xl text-center md:h-fit self-center font-bold">Projets</motion.h2>
+          className="text-2xl sm:text-4xl lg:text-6xl text-center md:h-fit self-center font-bold px-4">Projets</motion.h2>
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -113,10 +113,9 @@ export function Project() {
                 transition={{ x: { type: "spring", damping: 10, duration: 1 } }}
                 viewport={{ once: true, amount: 0.5 }}
                 className="md:w-1/2 w-full flex flex-col gap-4 items-center justify-center">
-                <h2 className="text-4xl font-bold">{proj.title}</h2>
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl text-center font-bold px-4">{proj.title}</h2>
                 <div className="flex gap-4">{proj.icons}</div>
-                <p className="text-xl whitespace-pre-line text-center font-bold p-4">{proj.description}</p>
-
+                <p className="text-sm sm:text-base lg:text-xl whitespace-pre-line text-center font-bold p-4">{proj.description}</p>
                 <div className="flex gap-4">
                   <motion.a
                     whileHover={{ scale: 1.2 }}
