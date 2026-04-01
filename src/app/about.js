@@ -92,6 +92,30 @@ export function About() {
                         En dehors de tout &ccedil;a j&apos;&eacute;coute beaucoup de musique, c&apos;est ma plus grande passion et j&apos;ai m&ecirc;me commenc&eacute; &agrave; jouer de la guitare &eacute;lectrique.<br />
                         Je suis un grand fan de rap, de rock, de metal, et tous les sous-genres que je ne vais pas citer. Mais je peux &eacute;couter tout et n&apos;importe quoi, je ne me ferme pas &agrave; d&apos;autres horizons.
                     </motion.p>
+                    <motion.h2
+                        initial={{ opacity: 0, y: -50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        animated={{ opacity: 1, y: 0 }}
+                        transition={{
+                            type: "spring",
+                            damping: 10,
+                            duration: 2,
+                        }}
+                        viewport={{ once: true, amount: 0.5 }}
+                        className="text-6xl w-full text-left p-8">Situation professionnelle</motion.h2>
+                    <motion.p
+                        initial={{ opacity: 0, x: 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        animated={{ opacity: 1, x: 0 }}
+                        transition={{
+                            type: "spring",
+                            damping: 10,
+                            duration: 1,
+                        }}
+                        viewport={{ once: true, amount: 0.5 }}
+                        className="w-full text-2xl lg:text-3xl text-left leading-10 ">
+                            Je suis actuellement en 2 ème année de mon diplôme bac+2 - Développeur / Intégrateur web, et occupe un poste de développeur Back-end en alternance.
+                        </motion.p>
                 </div>
             </div>
         </div>
