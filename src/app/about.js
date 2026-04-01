@@ -114,7 +114,7 @@ export function About() {
                         }}
                         viewport={{ once: true, amount: 0.5 }}
                         className="w-full text-base sm:text-lg lg:text-3xl text-left leading-8 sm:leading-10 ">
-                        Je suis actuellement en 2 ème année de mon diplôme bac+2 - Développeur / Intégrateur web, et occupe un poste de développeur Back-end en alternance.
+                        Je suis actuellement en 2 &egrave;me ann&eacute;e de mon dipl&ocirc;me bac+2 - D&eacute;veloppeur / Int&eacute;grateur web, et occupe un poste de d&eacute;veloppeur Back-end en alternance.
                     </motion.p>
                 </div>
             </div>
