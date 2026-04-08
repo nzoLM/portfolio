@@ -131,7 +131,7 @@ export function Navbar() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 20 }}
               transition={{ duration: 0.5, bounce: 0.6, type: "spring" }}
-              className='absolute top-full right-0 w-fit max-h-screen p-4 pr-0 sm:pl-10 sm:p-10 z-10'
+              className='visible md:hidden absolute top-full right-0 w-fit max-h-screen p-4 pr-0 sm:pl-10 sm:p-10 sm:pr-0 z-10'
             >
               <ul className="flex flex-col gap-3 text-right text-base sm:text-lg lg:text-2xl text-white w-fit sm:w-80">
                 <li onClick={handleToggle} className='hover:text-black transition bg-gradient-to-l from-[#7c7672] to-transparent'><a className='block w-full p-2 sm:p-5' href="#about">About</a></li>

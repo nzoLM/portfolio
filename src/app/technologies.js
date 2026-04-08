@@ -60,7 +60,7 @@ export function Technologies() {
                 onMouseLeave={() => setTooltip(null)}
                 className="relative z-10 w-fit lg:w-18"
               >
-                <Image src={Star} className="md:w-24 md:h-24 w-18 h-18 transition" alt="Star icon" />
+                <Image src={Star} className="md:w-24 md:h-24 w-18 h-18 transition" alt={tech.name} />
               </motion.div>
               <AnimatePresence>
                 {tooltip === tech.name && (

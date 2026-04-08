@@ -8,6 +8,7 @@ import Image from "next/image";
 import Stars from "../../public/stars.svg";
 import Ray2 from "../../public/ray2.svg";
 import { motion } from 'motion/react';
+import Link from "next/link";
 
 const projectData = [
   {
@@ -15,7 +16,7 @@ const projectData = [
     description: "Projet solo, plateforme communautaire pour les guitaristes.",
     icons: [
       <RiNextjsFill className="text-5xl" key="nextjs" />,
-      <FaNode className="text-5xl" key={"nodejs"}/>
+      <FaNode className="text-5xl" key={"nodejs"} />
     ],
     github: "https://github.com/nzoLM/Kords",
     website: "https://kordz.netlify.app/",
@@ -26,16 +27,16 @@ const projectData = [
     description: "Projet de groupe, 4 personnes, durée de 6 semaines, plateforme e-commerce de vente de chaussures",
     icons: [
       <RiReactjsFill className="text-5xl" key="nextjs" />,
-      <FaSymfony  className="text-5xl" key="symfony" />,
+      <FaSymfony className="text-5xl" key="symfony" />,
       <RiTailwindCssFill className="text-5xl" key="tailwindcss" />
     ],
     github: "https://github.com/nzoLM/e-commerce",
     image: Stars,
   },
-   {
+  {
     title: '"LavanVids" / Previously-on',
     description: "Projet de groupe, 2 personnes, projet visant à suivre la progression sur les séries consultées. Ce remake est développé en Svelte, avec Tailwind CSS pour le design et en utilisant l'API de BetaSeries",
-    icons: [<DiJavascript1 className="text-5xl" key="js" />, <RiTailwindCssFill className="text-5xl" key="tw" />, <RiSvelteFill className="text-5xl" key="svelte"/>],
+    icons: [<DiJavascript1 className="text-5xl" key="js" />, <RiTailwindCssFill className="text-5xl" key="tw" />, <RiSvelteFill className="text-5xl" key="svelte" />],
     github: "https://github.com/nzoLM/LavanVids",
     image: Stars, // Remplace par une image spécifique si besoin
   },
@@ -43,7 +44,7 @@ const projectData = [
     title: 'MyIRC',
     description: "Projet de groupe à 2 personnes\nProjet d'app de messagerie instantanée avec l'utilisation des socket en Javascript",
     icons: [<DiJavascript1 className="text-5xl" key="js" />],
-    github:"https://github.com/nzoLM/my-irc",
+    github: "https://github.com/nzoLM/my-irc",
     image: Stars, // Remplace par une image spécifique si besoin
   },
   {
@@ -51,7 +52,7 @@ const projectData = [
     description: "Projet de groupe, 3 personnes, durée de 2 semaines,\n Plateforme de quizz, avec création de quizz.",
     icons: [
       <RiReactjsFill className="text-5xl" key="nextjs" />,
-      <FaSymfony className="text-5xl" key="symfony"/>,
+      <FaSymfony className="text-5xl" key="symfony" />,
       <RiTailwindCssFill className="text-5xl" key="tailwindcss" />,
     ],
     github: "https://github.com/nzoLM/my_quizz",
@@ -104,8 +105,21 @@ export function Project() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ x: { type: "spring", damping: 10, duration: 1 } }}
                 viewport={{ once: true, amount: 0.5 }}
-                className="md:w-1/2 w-full flex justify-center">
-                <Image src={proj.image} alt={proj.title + " image"} className="max-h-72 object-contain" />
+                className="md:w-1/2 w-full flex justify-center p-4">
+                {proj.website ?
+                  <Link href={proj.website}>
+                    <img
+                      className="rounded-2xl"
+                      src={`https://api.microlink.io/?url=${proj.website}&screenshot=true&meta=false&embed=screenshot.url`}
+                      alt="Aperçu du site"
+                    />
+                  </Link>
+                  :
+                  <div className="text-center">
+                    <Image src={proj.image} alt={proj.title + " image"} className="max-h-72 object-contain" />
+					<p className="font-bold text-xl">Pas d&apos;aperçu disponible.</p>
+                  </div>
+                }
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: i % 2 === 0 ? 50 : -50 }}
