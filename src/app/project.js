@@ -42,6 +42,13 @@ const projectData = [
     image: Stars, // Remplace par une image spécifique si besoin
   },
   {
+    title: 'my-crud-tester',
+    description: "Projet solo\nProjet de réalisations de tests unitaires, projet scolaire",
+    icons: [<DiJavascript1 className="text-5xl" key="js" />, <FaDocker className="text-5xl" key="Docker" ></FaDocker>],
+    github: "https://github.com/nzoLM/my-crud-tester",
+    image: Stars, // Remplace par une image spécifique si besoin
+  },
+  {
     title: 'MyIRC',
     description: "Projet de groupe à 2 personnes\nProjet d'app de messagerie instantanée avec l'utilisation des socket en Javascript",
     icons: [<DiJavascript1 className="text-5xl" key="js" />, <RiReactjsFill className="text-5xl" key="reactjs" ></RiReactjsFill>],
@@ -60,13 +67,6 @@ const projectData = [
     // website: "https://elm-myquizz.netlify.app",
     image: Stars,
   },
-  // {
-  //   title: "Twitter clone",
-  //   description: "Projet de groupe, 4 personnes, durée de 1 mois\nReproduction des fonctionnalités de Twitter/X.",
-  //   icons: [<DiPhp className="text-5xl" key="php" />, <DiJavascript1 className="text-5xl" key="js" />, <RiTailwindCssFill className="text-5xl" key="tw" />],
-  //   github: "https://github.com/nzoLM/tweet-academie",
-  //   image: Stars, // Remplace par une image spécifique si besoin
-  // },
 
 ];
 
