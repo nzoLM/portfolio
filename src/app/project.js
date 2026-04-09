@@ -41,13 +41,13 @@ const projectData = [
     website: "https://lavanvids.netlify.app",
     image: Stars, // Remplace par une image spécifique si besoin
   },
-  // {
-  //   title: 'MyIRC',
-  //   description: "Projet de groupe à 2 personnes\nProjet d'app de messagerie instantanée avec l'utilisation des socket en Javascript",
-  //   icons: [<DiJavascript1 className="text-5xl" key="js" />],
-  //   github: "https://github.com/nzoLM/my-irc",
-  //   image: Stars, // Remplace par une image spécifique si besoin
-  // },
+  {
+    title: 'MyIRC',
+    description: "Projet de groupe à 2 personnes\nProjet d'app de messagerie instantanée avec l'utilisation des socket en Javascript",
+    icons: [<DiJavascript1 className="text-5xl" key="js" />, <RiReactjsFill className="text-5xl" key="reactjs" ></RiReactjsFill>],
+    github: "https://github.com/nzoLM/my-irc",
+    image: Stars, // Remplace par une image spécifique si besoin
+  },
   {
     title: "My Quizz",
     description: "Projet de groupe, 3 personnes, durée de 2 semaines,\n Plateforme de quizz, avec création de quizz.",
@@ -57,7 +57,7 @@ const projectData = [
       <RiTailwindCssFill className="text-5xl" key="tailwindcss" />,
     ],
     github: "https://github.com/nzoLM/my_quizz",
-    website: "https://elm-myquizz.netlify.app",
+    // website: "https://elm-myquizz.netlify.app",
     image: Stars,
   },
   // {
