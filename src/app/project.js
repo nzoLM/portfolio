@@ -38,15 +38,16 @@ const projectData = [
     description: "Projet de groupe, 2 personnes, projet visant à suivre la progression sur les séries consultées. Ce remake est développé en Svelte, avec Tailwind CSS pour le design et en utilisant l'API de BetaSeries",
     icons: [<DiJavascript1 className="text-5xl" key="js" />, <RiTailwindCssFill className="text-5xl" key="tw" />, <RiSvelteFill className="text-5xl" key="svelte" />],
     github: "https://github.com/nzoLM/LavanVids",
+    website: "https://lavanvids.netlify.app",
     image: Stars, // Remplace par une image spécifique si besoin
   },
-  {
-    title: 'MyIRC',
-    description: "Projet de groupe à 2 personnes\nProjet d'app de messagerie instantanée avec l'utilisation des socket en Javascript",
-    icons: [<DiJavascript1 className="text-5xl" key="js" />],
-    github: "https://github.com/nzoLM/my-irc",
-    image: Stars, // Remplace par une image spécifique si besoin
-  },
+  // {
+  //   title: 'MyIRC',
+  //   description: "Projet de groupe à 2 personnes\nProjet d'app de messagerie instantanée avec l'utilisation des socket en Javascript",
+  //   icons: [<DiJavascript1 className="text-5xl" key="js" />],
+  //   github: "https://github.com/nzoLM/my-irc",
+  //   image: Stars, // Remplace par une image spécifique si besoin
+  // },
   {
     title: "My Quizz",
     description: "Projet de groupe, 3 personnes, durée de 2 semaines,\n Plateforme de quizz, avec création de quizz.",
@@ -56,15 +57,16 @@ const projectData = [
       <RiTailwindCssFill className="text-5xl" key="tailwindcss" />,
     ],
     github: "https://github.com/nzoLM/my_quizz",
+    website: "https://elm-myquizz.netlify.app",
     image: Stars,
   },
-  {
-    title: "Twitter clone",
-    description: "Projet de groupe, 4 personnes, durée de 1 mois\nReproduction des fonctionnalités de Twitter/X.",
-    icons: [<DiPhp className="text-5xl" key="php" />, <DiJavascript1 className="text-5xl" key="js" />, <RiTailwindCssFill className="text-5xl" key="tw" />],
-    github: "https://github.com/nzoLM/tweet-academie",
-    image: Stars, // Remplace par une image spécifique si besoin
-  },
+  // {
+  //   title: "Twitter clone",
+  //   description: "Projet de groupe, 4 personnes, durée de 1 mois\nReproduction des fonctionnalités de Twitter/X.",
+  //   icons: [<DiPhp className="text-5xl" key="php" />, <DiJavascript1 className="text-5xl" key="js" />, <RiTailwindCssFill className="text-5xl" key="tw" />],
+  //   github: "https://github.com/nzoLM/tweet-academie",
+  //   image: Stars, // Remplace par une image spécifique si besoin
+  // },
 
 ];
 
@@ -117,7 +119,7 @@ export function Project() {
                   :
                   <div className="text-center">
                     <Image src={proj.image} alt={proj.title + " image"} className="max-h-72 object-contain" />
-					<p className="font-bold text-xl">Pas d&apos;aperçu disponible.</p>
+                    <p className="font-bold text-xl">Pas d&apos;aperçu disponible.</p>
                   </div>
                 }
               </motion.div>

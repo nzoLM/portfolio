@@ -48,8 +48,8 @@ export function About() {
                         Je m&apos;appelle Enzo LE MOAL, d&eacute;veloppeur web en formation &agrave; la Web@cad&eacute;mie by Epitech.<br />
                         Apr&egrave;s un baccalaur&eacute;at ( sp&eacute;cialit&eacute;s math&eacute;matiques et NSI ), j&apos;ai tent&eacute; une licence Math&eacute;matiques et Informatique,
                         mais l&apos;approche ne me convenait pas.<br />
-                        Durant cette licence je me suis form&eacute; en autodidacte au d&eacute;veloppement web, apr&egrave;s avoir &eacute;chou&eacute;
-                        2 fois ma premi&egrave;re ann&eacute;e, j&apos;ai quitt&eacute; la fac pour rejoindre ma formation actuelle.
+                        Durant cette licence je me suis form&eacute; en autodidacte au d&eacute;veloppement web, apr&egrave;s
+                        2 ans en dans cette licence, j&apos;ai quitt&eacute; la fac pour rejoindre ma formation actuelle.
                     </motion.p>
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
