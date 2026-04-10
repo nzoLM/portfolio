@@ -2,33 +2,24 @@
 import Star from "../../public/wide.svg";
 import Image from 'next/image';
 import {motion} from "motion/react";
+import profilPhoto from "@public/pictures/photo-de-profil.jpg";
 
 export function Hero(){
     return(
-        <div className="flex flex-col-reverse lg:flex-row grow items-center justify-center overflow-hidden">
+        <div className="flex flex-col-reverse lg:flex-row grow items-center justify-center overflow-hidden pb-6">
             <motion.div
             initial={{opacity: 0, x: -50}}
             whileInView={{opacity: 1, x: 0}}
             animated={{opacity: 1, x:0}}
             transition={{duration: 1.5, bounce: 0.6, type: "spring"}}
             viewport={{ once: true, amount: 0.5 }}
-             className="w-1/2 mb-10 lg:p-10 flex items-center justify-center ">
+             className="w-1/2 lg:p-10 flex items-center justify-center ">
                 <motion.div className="w-full"
-                    animate={{
-                        // Keyframes : définit les étapes de l'animation pour 'y'
-                        y: ["0%", "10%", "0%"],
-                      }}
-                      transition={{
-                        duration: 5,
-                        repeat: Infinity,
-                        repeatType: "loop",
-                        ease: "easeInOut",
-                      }}
                 >
-                <Image alt="Star icon" src={Star} className="lg:w-3/5 w-full items-center"/>
+                <Image alt="Photo de profil" src={profilPhoto} className=" lg:w-4/5 m-auto w-full items-center rounded-full shadow-lg shadow-black border-2 border-white"/>
                 </motion.div>
             </motion.div>
-            <motion.div className="flex flex-col text-center lg:text-right lg:w-1/2 h-full lg:p-5 gap-10 px-4" 
+            <motion.div className="flex flex-col text-center lg:text-right lg:w-1/2 h-full lg:p-5 gap-10 " 
                 initial={{opacity: 0, x: 50}}
                 whileInView={{opacity: 1, x: 0}}
                 animated={{opacity: 1, x:0}}

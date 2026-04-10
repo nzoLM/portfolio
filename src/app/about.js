@@ -77,7 +77,7 @@ export function About() {
                             duration: 2,
                         }}
                         viewport={{ once: true, amount: 0.5 }}
-                        className="text-3xl sm:text-4xl lg:text-6xl w-full text-right p-4 sm:p-8">Mes passions</motion.h2>
+                        className="text-3xl sm:text-4xl lg:text-6xl w-full text-left p-4 sm:p-8">Mes passions</motion.h2>
                     <motion.p
                         initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -88,8 +88,8 @@ export function About() {
                             duration: 1,
                         }}
                         viewport={{ once: true, amount: 0.5 }}
-                        className="w-full text-base sm:text-lg lg:text-3xl text-right leading-8 sm:leading-10 ">
-                        En dehors de tout &ccedil;a j&apos;&eacute;coute beaucoup de musique, c&apos;est ma plus grande passion et j&apos;ai m&ecirc;me commenc&eacute; &agrave; jouer de la guitare &eacute;lectrique.<br />
+                        className="w-full text-base sm:text-lg lg:text-3xl text-left leading-8 sm:leading-10 ">
+                        En dehors de tout &ccedil;a j&apos;&eacute;coute beaucoup de musique, c&apos;est ma plus grande passion et j&apos;ai m&ecirc;me commenc&eacute; &agrave; jouer de la guitare &eacute;lectrique.
                         Je suis un grand fan de rap, de rock, de metal, et tous les sous-genres que je ne vais pas citer. Mais je peux &eacute;couter tout et n&apos;importe quoi, je ne me ferme pas &agrave; d&apos;autres horizons.
                     </motion.p>
                     <motion.h2

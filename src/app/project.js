@@ -70,7 +70,6 @@ const projectData = [
 
 ];
 
-
 export function Project() {
   return (
     <div id="project" className="flex flex-col min-h-screen pb-10 gap-10 overflow-x-hidden">
@@ -129,7 +128,7 @@ export function Project() {
                 transition={{ x: { type: "spring", damping: 10, duration: 1 } }}
                 viewport={{ once: true, amount: 0.5 }}
                 className="md:w-1/2 w-full flex flex-col gap-4 items-center justify-center">
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl text-center font-bold px-4">{proj.title}</h2>
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl text-center font-bold px-4 border-b-2">{proj.title}</h2>
                 <div className="flex gap-4">{proj.icons}</div>
                 <p className="text-sm sm:text-base lg:text-xl whitespace-pre-line text-center font-bold p-4">{proj.description}</p>
                 <div className="flex gap-4">
