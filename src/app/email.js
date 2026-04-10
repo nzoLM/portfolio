@@ -8,8 +8,8 @@ export const ContactUs = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs
-      .sendForm('service_l65h04p', 'template_bm7aw9n', form.current, {
-        publicKey: 'bWVjjVqjuIMqe1JWN',
+      .sendForm('service_gqzhkpk', 'template_bm7aw9n', form.current, {
+        publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
       })
       .then(
         () => {
