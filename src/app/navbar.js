@@ -44,9 +44,9 @@ export function Navbar() {
     <motion.nav
       animate={hasScrolledOnce ? { y: showNavbar ? -12 : -150 } : { y: 0 }}
       transition={{ y: { type: "spring", stiffness: 100, damping: 12 } }}
-      className="fixed top-0 left-0 w-full h-46 lg:h-fit z-50"
+      className="sticky top-0 left-0 w-full lg:h-fit z-50"
     >
-      <div className='flex relative items-center p-4 sm:p-10 bg-linear-to-b from-black to-transparent gap-5 w-full text-foreground-secondary justify-between'>
+      <div className='flex relative items-center p-4 pt-10 sm:p-10 bg-linear-to-b from-black to-transparent gap-5 w-full text-foreground-secondary justify-between'>
         <div className="lg:w-96">
           <motion.h1 initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}

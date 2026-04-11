@@ -14,7 +14,7 @@ export default function Home() {
     <div className="fontWacks bg-primary overflow-hidden">
         <Navbar/>
       <div id="top" className="min-h-screen flex flex-col text-black">
-        <div className="h-48 lg:h-[128px]"></div>
+        {/* <div className="h-48 lg:h-[128px]"></div>  */}
         <Hero />
       </div>
       <div className="bg-linear-to-b from-primary to-black h-40"></div>
