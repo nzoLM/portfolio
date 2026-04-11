@@ -1,25 +1,35 @@
 "use client";
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 export const ContactUs = () => {
   const form = useRef();
+  const [status, setStatus] = useState(null);
 
-  const sendEmail = (e) => {
+  const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+  const sendEmail = async (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm('service_gqzhkpk', 'template_bm7aw9n', form.current, {
-        publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
-      })
-      .then(
-        () => {
-          console.log('SUCCESS!');
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        },
-      );
-    e.target.reset();
+
+    if (!publicKey) {
+      setStatus({
+        type: 'error',
+        message: 'Configuration EmailJS manquante (NEXT_PUBLIC_EMAILJS_PUBLIC_KEY).',
+      });
+      console.error('Missing NEXT_PUBLIC_EMAILJS_PUBLIC_KEY at build/deploy time.');
+      return;
+    }
+
+    try {
+      await emailjs.sendForm('service_84tu507', 'template_bm7aw9n', form.current, {
+        publicKey,
+      });
+      setStatus({ type: 'success', message: 'Message envoye avec succes.' });
+      e.target.reset(); 
+    } catch (error) {
+      setStatus({ type: 'error', message: "Echec de l'envoi. Reessaie dans quelques instants." });
+      console.error('FAILED...', error?.text || error);
+    }
   };
 
   return (
@@ -58,6 +68,16 @@ export const ContactUs = () => {
         value="Envoyer"
         className="self-center mt-4 px-4 sm:px-6 py-2 border-double border-4 border-black text-sm sm:text-base lg:text-lg font-medium hover:bg-black hover:text-white transition duration-150 cursor-pointer"
       />
+
+      {status && (
+        <p
+          className={`text-sm sm:text-base ${
+            status.type === 'success' ? 'text-green-700' : 'text-red-700'
+          }`}
+        >
+          {status.message}
+        </p>
+      )}
     </form>
 
   );
