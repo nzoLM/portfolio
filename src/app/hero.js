@@ -6,7 +6,7 @@ import profilPhoto from "@public/pictures/photo-de-profil.jpg";
 
 export function Hero(){
     return(
-        <div className="flex flex-col-reverse lg:flex-row grow items-center justify-center overflow-hidden pb-6">
+        <div className="flex flex-col-reverse lg:flex-row grow items-center justify-center overflow-hidden pt-32 pb-10">
             <motion.div
             initial={{opacity: 0, x: -50}}
             whileInView={{opacity: 1, x: 0}}
@@ -16,7 +16,7 @@ export function Hero(){
              className="w-1/2 lg:p-10 flex items-center justify-center ">
                 <motion.div className="w-full"
                 >
-                <Image alt="Photo de profil" src={profilPhoto} className=" lg:w-4/5 m-auto w-full items-center rounded-full shadow-lg shadow-black border-2 border-white"/>
+                <Image alt="Photo de profil" src={profilPhoto} className="lg:w-4/5 w-full m-auto items-center rounded-full shadow-lg shadow-black border-2 border-white"/>
                 </motion.div>
             </motion.div>
             <motion.div className="flex flex-col text-center lg:text-right lg:w-1/2 h-full lg:p-5 gap-10 " 

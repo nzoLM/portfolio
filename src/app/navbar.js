@@ -44,7 +44,7 @@ export function Navbar() {
     <motion.nav
       animate={hasScrolledOnce ? { y: showNavbar ? -12 : -150 } : { y: 0 }}
       transition={{ y: { type: "spring", stiffness: 100, damping: 12 } }}
-      className="sticky top-0 left-0 w-full lg:h-fit z-50"
+      className="fixed top-0 left-0 w-full lg:h-fit z-50"
     >
       <div className='flex relative items-center p-4 pt-10 sm:p-10 bg-linear-to-b from-black to-transparent gap-5 w-full text-foreground-secondary justify-between'>
         <div className="lg:w-96">
