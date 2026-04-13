@@ -3,6 +3,7 @@ import {RiMenu4Fill} from 'react-icons/ri';
 import { motion, AnimatePresence } from "motion/react";
 import { useState, useEffect } from 'react';
 import { DragonBallIcon } from '../components/DragonBallIcon';
+import Link from 'next/link';
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -115,6 +116,7 @@ export function Navbar() {
             viewport={{ once: true, amount: 0.5 }}
             className="w-full hidden md:flex md:gap-3 lg:gap-10 lg:text-2xl text-sm md:text-base text-center">
             <ul className="flex gap-3 justify-around">
+              <li className='hover:text-white/50 transition'><Link href="/competences">Comp&eacute;tences</Link></li>
               <li className='hover:text-white/50 transition'><a href="#about">À propos</a></li>
               <li className='hover:text-white/50 transition'><a href="#contact">Contacts</a></li>
               <li className='hover:text-white/50 transition'><a href="#project">Projets</a></li>
@@ -132,6 +134,7 @@ export function Navbar() {
               className='visible md:hidden absolute top-full right-0 w-fit max-h-screen p-4 pr-0 sm:pl-10 sm:p-10 sm:pr-0 z-10'
             >
               <ul className="flex flex-col gap-3 text-right text-base sm:text-lg lg:text-2xl text-white w-fit sm:w-80">
+                <li onClick={handleToggle} className='hover:text-black transition bg-linear-to-l from-[#7c7672] to-transparent'><Link className='block w-full p-2 sm:p-5' href="/competences">Comp&eacute;tences</Link></li>
                 <li onClick={handleToggle} className='hover:text-black transition bg-linear-to-l from-[#7c7672] to-transparent'><a className='block w-full p-2 sm:p-5' href="#about">About</a></li>
                 <li onClick={handleToggle} className='hover:text-black transition bg-linear-to-l from-[#7c7672] to-transparent'><a className='block w-full p-2 sm:p-5' href="#contact">Contacts</a></li>
                 <li onClick={handleToggle} className='hover:text-black transition bg-linear-to-l from-[#7c7672] to-transparent'><a className='block w-full p-2 sm:p-5' href="#project">Projets</a></li>

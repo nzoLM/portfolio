@@ -7,8 +7,11 @@ import { FaGithub, FaHtml5, FaCss3Alt, FaDocker, FaNode, FaSymfony } from "react
 import Image from "next/image";
 import Stars from "../../public/stars.svg";
 import Ray2 from "../../public/ray2.svg";
+import EcommerceImg from "../../public/pictures/e-commerce.png";
+import LavanvidsImg from "../../public/pictures/lavanvids.png";
+import MyIrcImg from "../../public/pictures/my-irc.png";
+import MyQuizzImg from "../../public/pictures/my_quizz.png";
 import { motion } from 'motion/react';
-import Link from "next/link";
 
 const projectData = [
   {
@@ -31,15 +34,15 @@ const projectData = [
       <RiTailwindCssFill className="text-5xl" key="tailwindcss" />
     ],
     github: "https://github.com/nzoLM/e-commerce",
-    image: Stars,
+    image: EcommerceImg,
   },
   {
     title: '"LavanVids" / Previously-on',
     description: "Projet de groupe, 2 personnes, projet visant à suivre la progression sur les séries consultées. Ce remake est développé en Svelte, avec Tailwind CSS pour le design et en utilisant l'API de BetaSeries",
     icons: [<DiJavascript1 className="text-5xl" key="js" />, <RiTailwindCssFill className="text-5xl" key="tw" />, <RiSvelteFill className="text-5xl" key="svelte" />],
     github: "https://github.com/nzoLM/LavanVids",
-    website: "https://lavanvids.netlify.app",
-    image: Stars, // Remplace par une image spécifique si besoin
+    // website: "https://lavanvids.netlify.app",
+    image: LavanvidsImg, // Remplace par une image spécifique si besoin
   },
   {
     title: 'my-crud-tester',
@@ -53,7 +56,7 @@ const projectData = [
     description: "Projet de groupe à 2 personnes\nProjet d'app de messagerie instantanée avec l'utilisation des socket en Javascript",
     icons: [<DiJavascript1 className="text-5xl" key="js" />, <RiReactjsFill className="text-5xl" key="reactjs" ></RiReactjsFill>],
     github: "https://github.com/nzoLM/my-irc",
-    image: Stars, // Remplace par une image spécifique si besoin
+    image: MyIrcImg,
   },
   {
     title: "My Quizz",
@@ -65,7 +68,7 @@ const projectData = [
     ],
     github: "https://github.com/nzoLM/my_quizz",
     // website: "https://elm-myquizz.netlify.app",
-    image: Stars,
+    image: MyQuizzImg,
   },
 
 ];
@@ -107,20 +110,27 @@ export function Project() {
                 transition={{ x: { type: "spring", damping: 10, duration: 1 } }}
                 viewport={{ once: true, amount: 0.5 }}
                 className="md:w-1/2 w-full flex justify-center p-4">
-                {proj.website ?
-                  <Link href={proj.website}>
+                {proj.website ? (
+                  <a
+                    href={proj.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
                     <img
-                      className="rounded-2xl"
+                      className="rounded-2xl max-h-72 w-auto object-contain"
                       src={`https://api.microlink.io/?url=${proj.website}&screenshot=true&meta=false&embed=screenshot.url`}
-                      alt="Aperçu du site"
+                      alt={`Aperçu de ${proj.title}`}
+                      loading="lazy"
                     />
-                  </Link>
-                  :
+                  </a>
+                ) : proj.image ? (
                   <div className="text-center">
-                    <Image src={proj.image} alt={proj.title + " image"} className="max-h-72 object-contain" />
-                    <p className="font-bold text-xl">Pas d&apos;aperçu disponible.</p>
+                    <Image src={proj.image} alt={proj.title + " image"} className="rounded-2xl max-h-72 w-auto object-contain" />
                   </div>
-                }
+                ) : (
+                  <p className="font-bold text-xl text-center">Pas d&apos;aperçu disponible.</p>
+                )}
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: i % 2 === 0 ? 50 : -50 }}
