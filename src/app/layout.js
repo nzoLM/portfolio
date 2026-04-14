@@ -26,7 +26,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Enzo Le Moal | Développeur Full Stack",
     description: "Portfolio de Enzo Le Moal, développeur web full stack.",
-    images: ["/wide.svg"]
+    images: ["/dragonball.svg"]
   },
   openGraph: {
     title: "Enzo Le Moal | Développeur Full Stack",
@@ -37,7 +37,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "/wide.svg",
+        url: "/dragonball.svg",
         width: 1200,
         height: 630,
         alt: "Portfolio Enzo Le Moal",
@@ -45,7 +45,7 @@ export const metadata = {
     ],
   },
   icons: {
-    icon: "/wide.svg",
+    icon: "/dragonball.svg",
   },
 };
 
