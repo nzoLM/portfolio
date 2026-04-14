@@ -8,7 +8,7 @@ export function Contact() {
 
     return (
         <div className="analogist overflow-x-hidden">
-            <div className="bg-linear-to-b to-transparent from-black h-20"></div>
+            <div className="bg-linear-to-b to-transparent from-background h-20"></div>
 
             <div id="contact" className='flex flex-col lg:flex-row justify-center items-center min-h-screen '>
                 <motion.div
@@ -53,7 +53,7 @@ export function Contact() {
                     </ul>
                 </motion.div>
             </div>
-            <div className="bg-linear-to-b from-transparent to-black h-40"></div>
+            <div className="bg-linear-to-b from-transparent to-background h-40"></div>
 
         </div>
     )

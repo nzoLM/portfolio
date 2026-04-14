@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 @theme {
-    --background: var(--background);
+    --color-background: var(--background);
     --color-foreground: var(--foreground);
     --color-foreground-secondary: var(--foreground-secondary);
     --color-primary: var(--primary);
@@ -14,11 +14,17 @@
 }
 
 :root {
-    --color-foreground: #ffffff;
+    /* --foreground: #000000; */
+    --foreground: #ffffff;
+    /* --foreground: #d1c1e0; */
     --foreground-secondary: #ffffff;
-    --background: #171717;
-    --primary: #A79EA1;
+    --background: #000000;
+    /* --background: #15173D; */
+    /* --primary: #A79EA1; */
     /* --primary: #2E073F; */
+    /* --primary: #15173D; */
+    --primary: #2A004E;
+    /* --primary: #171717; */
     scroll-behavior: smooth;
 }
 

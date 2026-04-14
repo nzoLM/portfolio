@@ -1,7 +1,7 @@
 "use client";
 import { DiPhp, DiJavascript1 } from "react-icons/di";
 import React from "react";
-import Star from "../../public/star-with-star-field.svg"
+import Star from "@public/cross-star-white.svg";
 import { RiTailwindCssFill, RiNextjsFill, RiNextjsLine, RiReactjsFill, RiSvelteFill } from "react-icons/ri";
 import { FaGithub, FaHtml5, FaCss3Alt, FaDocker, FaNode, FaSymfony } from "react-icons/fa";
 import Image from "next/image";
@@ -45,7 +45,7 @@ const projectData = [
     image: LavanvidsImg, // Remplace par une image spécifique si besoin
   },
   {
-    title: 'my-crud-tester',
+    title: 'My-crud-tester',
     description: "Projet solo\nProjet de réalisations de tests unitaires, projet scolaire",
     icons: [<DiJavascript1 className="text-5xl" key="js" />, <FaDocker className="text-5xl" key="Docker" ></FaDocker>],
     github: "https://github.com/nzoLM/my-crud-tester",
@@ -75,27 +75,14 @@ const projectData = [
 
 export function Project() {
   return (
-    <div id="project" className="flex flex-col min-h-screen pb-10 gap-10 overflow-x-hidden">
-      <div className="flex justify-around md:my-5 my-10">
-        <motion.div initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ x: { type: "spring", damping: 10, duration: 1 } }}
-          viewport={{ once: true, amount: 0.5 }}>
-          <Image alt="Arrow logo" src={Ray2} />
-        </motion.div>
+    <div id="project" className="text-foreground flex flex-col min-h-screen pb-10 gap-10 overflow-x-hidden">
+      <div className="flex justify-around md:my-5 my-10 p-4">
         <motion.h2
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ y: { type: "spring", damping: 10, duration: 1 } }}
           viewport={{ once: true, amount: 0.5 }}
-          className="text-2xl sm:text-4xl lg:text-6xl text-center md:h-fit self-center font-bold px-4">Projets</motion.h2>
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ x: { type: "spring", damping: 10, duration: 1 } }}
-          viewport={{ once: true, amount: 0.5 }}>
-          <Image style={{ color: "white" }} alt="Arrow logo" src={Ray2} className="rotate-180" />
-        </motion.div>
+          className="text-3xl sm:text-4xl lg:text-6xl text-left sm:p-8 font-bold border-b-2">Projets</motion.h2>
       </div>
       <div className="flex flex-col justify-around">
         {projectData.map((proj, i) => (

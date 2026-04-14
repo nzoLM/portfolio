@@ -19,7 +19,7 @@ export function About() {
     })
 
     return (
-        <div id="about" className="relative flex flex-col text-foreground-secondary bg-black w-full">
+        <div id="about" className="relative flex flex-col text-foreground-secondary bg-background w-full">
             <Image alt="Star-circle icon" src={Star} className="absolute w-full h-full p-5" />
             <div className="z-0 flex flex-col items-center align-center self-center">
                 <div className="flex flex-col justify-center items-center text-left gap-5 sm:gap-10 sm:p-10 py-20 px-4">
@@ -63,7 +63,7 @@ export function About() {
                             }
                         }}
                         viewport={{ once: true, amount: 0.5 }}
-                        id="cv-btn" className="relative w-fit h-fit border-4 border-primary border-double hover:text-black ">
+                        id="cv-btn" className="relative w-fit h-fit border-4 border-primary border-double hover:text-foreground ">
                         <a id="cv-link" href="files/CV.pdf" download="EnzoLeMoal.pdf" className="z-100 flex gap-5 items-center text-lg lg:text-2xl cursor-pointer bg-transparent"><Image src={WhiteStar} alt="Star  logo" height={50} />T&eacute;l&eacute;charger mon CV<Image src={WhiteStar} alt="Star logo" height={50} /></a>
                         <div id="cv-bg" className="-z-10 w-full h-full top-0 left-0 absolute bg-primary scale-y-0 transition"></div>
                     </motion.div>
