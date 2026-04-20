@@ -3,14 +3,16 @@ import React from "react";
 
 export const metadata = {
   title: "Enzo LE MOAL - DÉVELOPPEUR WEB FULLSTACK",
-  description: "Enzo LE MOAL, développeur web fullstack",
-  authors: [{ name: "Enzo Le Moal" }],
+  description: "Enzo LE MOAL, développeur web fullstack, Paris,France",
+  authors: [{ name: "Enzo Le Moal" }, { name: "Enzo LE MOAL" }],
+  creator : "Enzo LE MOAL",
   metadataBase: new URL("https://enzo-lemoal.netlify.app"),
   alternates: {
     canonical: "/",
   },
   keywords: [
     "développeur full stack",
+    "Enzo LE MOAL",
     "portfolio développeur web",
     "alternance développeur",
     "Next.js",
