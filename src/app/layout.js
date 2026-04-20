@@ -5,14 +5,19 @@ export const metadata = {
   title: "Enzo LE MOAL - DÉVELOPPEUR WEB FULLSTACK",
   description: "Enzo LE MOAL, développeur web fullstack, Paris,France",
   authors: [{ name: "Enzo Le Moal" }, { name: "Enzo LE MOAL" }],
-  creator : "Enzo LE MOAL",
+  creator: "Enzo LE MOAL",
   metadataBase: new URL("https://enzo-lemoal.netlify.app"),
   alternates: {
     canonical: "/",
   },
+  verification: {
+    google: 'zJ7ldQ-S4-4xgWd_IZ5BUUEH_VMHr5Sn5XyVIsEST6U',
+  },
   keywords: [
     "développeur full stack",
     "Enzo LE MOAL",
+    "Enzo Le Moal",
+    "enzo le moal",
     "portfolio développeur web",
     "alternance développeur",
     "Next.js",
@@ -65,6 +70,11 @@ export default function RootLayout({ children }) {
       'https://www.linkedin.com/in/enzo-le-moal',
       'https://github.com/nzoLM',
     ],
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Paris',
+      addressCountry: 'FR',
+    },
   }
   return (
     <html lang="fr">
