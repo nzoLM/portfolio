@@ -26,7 +26,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Enzo Le Moal | Développeur Full Stack",
+    title: "Enzo Le Moal | Développeur web Full Stack",
     description: "Portfolio de Enzo Le Moal, développeur web full stack.",
     images: ["/dragonball.svg"]
   },
@@ -52,9 +52,28 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Enzo Le Moal',
+    url: 'https://enzo-lemoal.netlify.app',
+    image: 'https://enzo-lemoal.netlify.app/files/photo-de-profil.jpg',
+    jobTitle: 'Développeur Web Full Stack',
+    description: 'Développeur web spécialisé en React, Next.js et Django.',
+    sameAs: [
+      'https://www.linkedin.com/in/enzo-le-moal',
+      'https://github.com/nzoLM',
+    ],
+  }
   return (
     <html lang="fr">
-      <head />
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body>{children}</body>
     </html>
   );
