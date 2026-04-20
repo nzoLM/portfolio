@@ -11,7 +11,7 @@ export const metadata = {
     canonical: "/",
   },
   verification: {
-    google: 'zJ7ldQ-S4-4xgWd_IZ5BUUEH_VMHr5Sn5XyVIsEST6U',
+    google: 'bwfxP_GZ1U4RjCSuyH_EdHPiv0j8Jp3cHaBjRGC4-_c',
   },
   keywords: [
     "développeur full stack",
