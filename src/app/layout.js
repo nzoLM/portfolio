@@ -39,7 +39,7 @@ export const metadata = {
     title: "Enzo Le Moal | Développeur Full Stack",
     description: "Portfolio de Enzo Le Moal, développeur web full stack.",
     url: "https://enzo-lemoal.netlify.app",
-    siteName: "Portfolio Enzo Le Moal",
+    siteName: "Enzo Le Moal",
     locale: "fr_FR",
     type: "website",
     images: [
@@ -52,7 +52,7 @@ export const metadata = {
     ],
   },
   icons: {
-    icon: "/dragonball.svg",
+    icon: { url: "/dragonball.svg" },
   },
 };
 
