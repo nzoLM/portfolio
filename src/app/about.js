@@ -4,6 +4,7 @@ import Star from "../../public/long1.svg";
 import Image from "next/image";
 import WhiteStar from "../../public/white-star.svg";
 import { motion } from "motion/react";
+import about from "../data/about.json"
 
 export function About() {
     useEffect(() => {
@@ -45,11 +46,18 @@ export function About() {
                         }}
                         viewport={{ once: true, amount: 0.5 }}
                         className="text-base sm:text-lg lg:text-3xl self-center leading-8 sm:leading-10">
-                        Je m&apos;appelle Enzo LE MOAL, d&eacute;veloppeur web en formation &agrave; la Web@cad&eacute;mie by Epitech.<br />
+                        {about["a-propos"].map((text, i) => (
+                            <span key={i}>
+                                {text}
+                                {i !== about["a-propos"].length - 1 && <br />}
+                            </span>
+                        ))}
+
+                        {/* Je m&apos;appelle Enzo LE MOAL, d&eacute;veloppeur web en formation &agrave; la Web@cad&eacute;mie by Epitech.<br />
                         Apr&egrave;s un baccalaur&eacute;at ( sp&eacute;cialit&eacute;s math&eacute;matiques et NSI ), j&apos;ai tent&eacute; une licence Math&eacute;matiques et Informatique,
                         mais l&apos;approche ne me convenait pas.<br />
                         Durant cette licence je me suis form&eacute; en autodidacte au d&eacute;veloppement web, apr&egrave;s
-                        2 ans en dans cette licence, j&apos;ai quitt&eacute; la fac pour rejoindre ma formation actuelle.
+                        2 ans en dans cette licence, j&apos;ai quitt&eacute; la fac pour rejoindre ma formation actuelle. */}
                     </motion.p>
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
@@ -89,9 +97,14 @@ export function About() {
                         }}
                         viewport={{ once: true, amount: 0.5 }}
                         className="w-full text-base sm:text-lg lg:text-3xl text-left leading-8 sm:leading-10 ">
-                        En dehors de tout &ccedil;a j&apos;&eacute;coute beaucoup de musique, c&apos;est ma plus grande passion et j&apos;ai m&ecirc;me commenc&eacute; &agrave; jouer de la guitare &eacute;lectrique.
-                        Je suis un grand fan de rap, de rock, de metal, et tous les sous-genres que je ne vais pas citer. Mais je peux &eacute;couter tout et n&apos;importe quoi, je ne me ferme pas &agrave; d&apos;autres horizons.
-                    </motion.p>
+                        {about["mes-passions"].map((text, i) => (
+                            <span key={i}>
+                                {text}
+                                {i !== about["a-propos"].length - 1 && <br />}
+                            </span>
+                        ))}
+
+                        </motion.p>
                     <motion.h2
                         initial={{ opacity: 0, y: -50 }}
                         whileInView={{ opacity: 1, y: 0 }}
