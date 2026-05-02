@@ -6,12 +6,12 @@ export const metadata = {
   description: "Enzo LE MOAL, développeur web fullstack, Paris,France",
   authors: [{ name: "Enzo Le Moal" }, { name: "Enzo LE MOAL" }],
   creator: "Enzo LE MOAL",
-  metadataBase: new URL("https://enzo-lemoal.netlify.app"),
+  metadataBase: new URL("https://enzo-lemoal.fr"),
   alternates: {
     canonical: "/",
   },
   verification: {
-    google: 'bwfxP_GZ1U4RjCSuyH_EdHPiv0j8Jp3cHaBjRGC4-_c',
+    google: 'DeHJCg2I3YLHf-WnhmmN203AFYcgu9B9NZo6LOshNoE',
   },
   keywords: [
     "développeur full stack",
@@ -38,7 +38,7 @@ export const metadata = {
   openGraph: {
     title: "Enzo Le Moal | Développeur Full Stack",
     description: "Portfolio de Enzo Le Moal, développeur web full stack.",
-    url: "https://enzo-lemoal.netlify.app",
+    url: "https://enzo-lemoal.fr",
     siteName: "Enzo Le Moal",
     locale: "fr_FR",
     type: "website",
@@ -62,8 +62,8 @@ export default function RootLayout({ children }) {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'Enzo Le Moal',
-    url: 'https://enzo-lemoal.netlify.app',
-    image: 'https://enzo-lemoal.netlify.app/files/photo-de-profil.jpg',
+    url: 'https://enzo-lemoal.fr',
+    image: 'https://enzo-lemoal.fr/files/photo-de-profil.jpg',
     jobTitle: 'Développeur Web Full Stack',
     description: 'Développeur web spécialisé en React, Next.js et Django.',
     sameAs: [
