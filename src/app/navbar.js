@@ -1,5 +1,5 @@
 "use client";
-import {RiMenu4Fill} from 'react-icons/ri';
+import { RiMenu4Fill } from 'react-icons/ri';
 import { motion, AnimatePresence } from "motion/react";
 import { useState, useEffect } from 'react';
 import { DragonBallIcon } from '../components/DragonBallIcon';
@@ -43,12 +43,15 @@ export function Navbar() {
 
   return (
     <motion.nav
-      animate={hasScrolledOnce ? { y: showNavbar ? -12 : -150 } : { y: 0 }}
-      transition={{ y: { type: "spring", stiffness: 100, damping: 12 } }}
-      className="fixed top-0 left-0 w-full lg:h-fit z-50"
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      animated={{ opacity: 1, x: 0 }}
+      transition={{ duration: 2, bounce: 0.6, type: "spring" }}
+      viewport={{ once: true, amount: 0.5 }}
+      className="sticky top-0 left-0 max-h-screen z-50 w-1/6 bg-primary border-r-2"
     >
-      <div className='flex relative items-center p-4 pt-10 sm:p-10 bg-linear-to-b from-black to-transparent gap-5 w-full text-foreground-secondary justify-between'>
-        <div className="lg:w-96">
+      <div className='flex flex-col h-full relative items-center p-4 sm:p-10 text-foreground justify-between'>
+        <div className="">
           <motion.h1 initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             animated={{ opacity: 1, x: 0 }}
@@ -56,7 +59,7 @@ export function Navbar() {
             viewport={{ once: true, amount: 0.5 }}
             className='text-xl sm:text-3xl lg:text-5xl text-center sm:w-full w-20'>ENZO LE MOAL</motion.h1>
         </div>
-        <div className='absolute left-1/2 -translate-x-1/2 m-auto'>
+        <div className=' m-auto'>
           <a href="#top" onClick={() => setIsOpen(false)}>
             <motion.div
               initial={{ opacity: 0, y: -50 }}
@@ -105,7 +108,7 @@ export function Navbar() {
               }}
               viewport={{ once: true, amount: 0.5 }}
               className='w-18 h-18' >
-              <RiMenu4Fill alt='Menu icon' className='self-center w-full h-full'/>
+              <RiMenu4Fill alt='Menu icon' className='self-center w-full h-full' />
             </motion.div>
           </div>
           <motion.div
@@ -114,8 +117,8 @@ export function Navbar() {
             animated={{ opacity: 1, x: 0 }}
             transition={{ duration: 2, bounce: 0.6, type: "spring" }}
             viewport={{ once: true, amount: 0.5 }}
-            className="w-full hidden md:flex md:gap-3 lg:gap-10 lg:text-2xl text-sm md:text-base text-center">
-            <ul className="flex gap-3 justify-around">
+            className=" hidden md:flex md:gap-3 lg:gap-10 lg:text-2xl text-sm md:text-base text-center">
+            <ul className="flex flex-col gap-3 justify-around">
               <li className='hover:text-white/50 transition'><Link href="/competences">Comp&eacute;tences</Link></li>
               <li className='hover:text-white/50 transition'><a href="#about">À propos</a></li>
               <li className='hover:text-white/50 transition'><a href="#contact">Contacts</a></li>

@@ -24,7 +24,7 @@ export function Technologies() {
   ];
 
   return (
-    <div id="tech-section" className="relative min-h-screen h-full flex flex-col bg-black text-white overflow-hidden">
+    <div id="tech-section" className="relative min-h-screen  flex flex-col bg-black text-white overflow-hidden">
       <motion.h2
       initial={{opacity: 0, x: 100}}
       whileInView={{opacity: 1, x: 0}}
@@ -32,11 +32,11 @@ export function Technologies() {
       transition={{x:{
           type: "spring",
           damping: 10,
-          duration: 1,
+          duration: 0.5,
           }}}
       viewport={{ once: true, amount: 0.5 }}
       className="text-3xl sm:text-5xl lg:text-6xl py-20 lg:p-10 text-center lg:text-left px-4">Technologies utilisées</motion.h2>
-      <ul className="grid grid-cols-2 lg:grid-cols-4 my-10 lg:w-1/2 grow self-center gap-10 lg:gap-16 p-4 md:p-10">
+      <ul className="grid grid-cols-2 lg:grid-cols-4 my-10  grow self-center gap-10 lg:gap-16 p-4 md:p-10">
         {technologies.map((tech, index) => (
           <li key={index} className={`flex items-center justify-center relative ${tech.fullWidth ? 'col-span-2' : 'w-fit'}`}>
             <div className="relative flex items-center justify-center">

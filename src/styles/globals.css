@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Bebas+Neue&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -13,18 +13,21 @@
     font-optical-sizing: auto;
 }
 
+.bebas-neue {
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 0.05em;
+}
+
+h1, h2, h3 {
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 0.05em;
+}
+
 :root {
-    /* --foreground: #000000; */
-    --foreground: #ffffff;
-    /* --foreground: #d1c1e0; */
-    --foreground-secondary: #ffffff;
-    --background: #000000;
-    /* --background: #15173D; */
-    /* --primary: #A79EA1; */
-    /* --primary: #2E073F; */
-    /* --primary: #15173D; */
-    --primary: #2A004E;
-    /* --primary: #171717; */
+    --foreground: #1a1008;
+    --foreground-secondary: #f0e8d8;
+    --background: #1c1408;
+    --primary: #c2dad9;
     scroll-behavior: smooth;
 }
 
@@ -55,7 +58,10 @@ p {
 }
 
 body {
-    background: var(--background);
+    background-color: var(--primary);
+    background-image: url('/the-wall.svg');
+    background-size: 500px 500px;
+    background-repeat: repeat;
     color: var(--foreground);
     font-family: Arial, Helvetica, sans-serif;
 }

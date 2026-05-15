@@ -42,7 +42,7 @@ export function About() {
                         transition={{
                             type: "spring",
                             damping: 10,
-                            duration: 1,
+                            duration: 0.5,
                         }}
                         viewport={{ once: true, amount: 0.5 }}
                         className="text-base sm:text-lg lg:text-3xl self-center leading-8 sm:leading-10">
@@ -67,7 +67,7 @@ export function About() {
                             x: {
                                 type: "spring",
                                 damping: 10,
-                                duration: 1,
+                                duration: 0.5,
                             }
                         }}
                         viewport={{ once: true, amount: 0.5 }}
@@ -93,7 +93,7 @@ export function About() {
                         transition={{
                             type: "spring",
                             damping: 10,
-                            duration: 1,
+                            duration: 0.5,
                         }}
                         viewport={{ once: true, amount: 0.5 }}
                         className="w-full text-base sm:text-lg lg:text-3xl text-left leading-8 sm:leading-10 ">
@@ -123,7 +123,7 @@ export function About() {
                         transition={{
                             type: "spring",
                             damping: 10,
-                            duration: 1,
+                            duration: 0.5,
                         }}
                         viewport={{ once: true, amount: 0.5 }}
                         className="w-full text-base sm:text-lg lg:text-3xl text-left leading-8 sm:leading-10 ">

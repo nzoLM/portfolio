@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import { motion } from "motion/react";
 import { FaArrowLeft } from "react-icons/fa";
