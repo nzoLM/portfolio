@@ -7,9 +7,6 @@ export const metadata = {
   authors: [{ name: "Enzo Le Moal" }, { name: "Enzo LE MOAL" }],
   creator: "Enzo LE MOAL",
   metadataBase: new URL("https://enzo-lemoal.fr"),
-  alternates: {
-    canonical: "/",
-  },
   verification: {
     google: 'DeHJCg2I3YLHf-WnhmmN203AFYcgu9B9NZo6LOshNoE',
   },
