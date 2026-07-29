@@ -100,7 +100,7 @@ export function About() {
                         {about["mes-passions"].map((text, i) => (
                             <span key={i}>
                                 {text}
-                                {i !== about["a-propos"].length - 1 && <br />}
+                                {i !== about["mes-passions"].length - 1 && <br />}
                             </span>
                         ))}
 
