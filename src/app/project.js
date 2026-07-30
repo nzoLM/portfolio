@@ -1,6 +1,6 @@
 "use client";
 import { DiPhp, DiJavascript1 } from "react-icons/di";
-import React from "react";
+import {Fragment} from "react";
 import Star from "../../public/star-with-star-field.svg"
 import { RiTailwindCssFill, RiNextjsFill, RiNextjsLine, RiReactjsFill, RiSvelteFill } from "react-icons/ri";
 import { FaGithub, FaHtml5, FaCss3Alt, FaDocker, FaNode, FaSymfony } from "react-icons/fa";
@@ -42,14 +42,14 @@ const projectData = [
     icons: [<DiJavascript1 className="text-5xl" key="js" />, <RiTailwindCssFill className="text-5xl" key="tw" />, <RiSvelteFill className="text-5xl" key="svelte" />],
     github: "https://github.com/nzoLM/LavanVids",
     // website: "https://lavanvids.netlify.app",
-    image: LavanvidsImg, // Remplace par une image spécifique si besoin
+    image: LavanvidsImg, 
   },
   {
     title: 'my-crud-tester',
     description: "Projet solo\nProjet de réalisations de tests unitaires, projet scolaire",
     icons: [<DiJavascript1 className="text-5xl" key="js" />, <FaDocker className="text-5xl" key="Docker" ></FaDocker>],
     github: "https://github.com/nzoLM/my-crud-tester",
-    image: Stars, // Remplace par une image spécifique si besoin
+    image: Stars, 
   },
   {
     title: 'MyIRC',
@@ -99,7 +99,7 @@ export function Project() {
       </div>
       <div className="flex flex-col justify-around">
         {projectData.map((proj, i) => (
-          <React.Fragment key={proj.title}>
+          <Fragment key={proj.title}>
             <div
               className={`flex flex-col items-center justify-around gap-10 w-full ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                 }`}
@@ -165,7 +165,6 @@ export function Project() {
                 </div>
               </motion.div>
             </div>
-            {/* Séparateur sauf après le dernier projet */}
             {(
               <div className={`py-10 from-transparent to-[#937881]`}>
                 <motion.div
@@ -178,7 +177,7 @@ export function Project() {
                 </motion.div>
               </div>
             )}
-          </React.Fragment>
+          </Fragment>
         ))}
       </div>
     </div>

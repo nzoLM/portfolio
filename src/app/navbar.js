@@ -87,7 +87,7 @@ export function Navbar() {
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              whileHover={{ scale: 1.6 }}
+              whileHover={{ scale: 1.3 }}
               transition={{
                 x: {
                   duration: 2,
@@ -115,7 +115,6 @@ export function Navbar() {
             viewport={{ once: true, amount: 0.5 }}
             className="w-full hidden md:flex md:gap-3 lg:gap-10 lg:text-2xl text-sm md:text-base text-center">
             <ul className="flex gap-3 justify-around">
-              {/* <li className='hover:text-white/50 transition'><Link href="/competences">Comp&eacute;tences</Link></li> */}
               <AccessibilityToggle />
               <li className='hover:text-white/50 transition'><a href="#about">À propos</a></li>
               <li className='hover:text-white/50 transition'><a href="#contact">Contacts</a></li>
