@@ -37,7 +37,7 @@ const projectData = [
     image: EcommerceImg,
   },
   {
-    title: '"LavanVids" / Previously-on',
+    title: 'LavanVids',
     description: "Projet de groupe, 2 personnes, projet visant à suivre la progression sur les séries consultées. Ce remake est développé en Svelte, avec Tailwind CSS pour le design et en utilisant l'API de BetaSeries",
     icons: [<DiJavascript1 className="text-5xl" key="js" />, <RiTailwindCssFill className="text-5xl" key="tw" />, <RiSvelteFill className="text-5xl" key="svelte" />],
     github: "https://github.com/nzoLM/LavanVids",
