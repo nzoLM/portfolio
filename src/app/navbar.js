@@ -85,7 +85,7 @@ export function Navbar() {
 
           </div>
         </div>
-        <div className='flex items-center gap-4 text-sm sm:text-lg md:text-xl'>
+        <div className='flex items-center gap-0 sm:gap-4 text-sm sm:text-lg md:text-xl'>
           <motion.div className='w-full text-sm md:text-base text-center'
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
