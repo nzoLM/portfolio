@@ -55,21 +55,23 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+@custom-variant dyslexia-mode (.dyslexia-mode &);
+
 .dyslexia-mode,
 .dyslexia-mode * {
     font-family: Verdana, Tahoma, "Trebuchet MS", Arial, sans-serif !important;
     letter-spacing: 0.06em !important;
     word-spacing: 0.12em !important;
     line-height: 1.7 !important;
-    h1 {
-        font-size: 2.5rem;
-    }
+
+    
 }
 
-.dyslexia-mode em,
+
+/* .dyslexia-mode em,
 .dyslexia-mode i {
     font-style: normal !important;
-}
+} */
 
 /* @keyframes twinkLing */
 

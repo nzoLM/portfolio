@@ -23,15 +23,15 @@ export function AccessibilityToggle() {
   };
 
   return (
-    <li
+    <button
       type="button"
       onClick={toggle}
       aria-pressed={enabled}
       aria-label={enabled ? "Désactiver la police adaptée à la dyslexie" : "Activer la police adaptée à la dyslexie"}
       title="Police adaptée à la dyslexie"
-      className={`block w-full p-2 sm:p-5 flex items-center justify-end cursor-pointer transition transition bg-linear-to-l from-[#7c7672] to-transparent hover:text-black ${enabled ? 'text-black' : ''}`}
+      className={` p-2 sm:p-5 flex items-center cursor-pointer transition hover:text-black ${enabled ? 'text-black' : ''}`}
     >
       <FaUniversalAccess className="w-6 h-6 sm:w-7 sm:h-7 " />
-    </li>
+    </button>
   );
 }
