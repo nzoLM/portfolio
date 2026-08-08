@@ -75,7 +75,7 @@ const projectData = [
 
 export function Project() {
   return (
-    <div id="project" className="flex flex-col min-h-screen pb-10 gap-10 overflow-x-hidden">
+    <div id="project" className="flex flex-col min-h-screen pb-10 gap-10 overflow-x-hidden text-black">
       <div className="flex justify-around md:my-5 my-10">
         <motion.div initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -150,14 +150,14 @@ export function Project() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <FaGithub className="cursor-pointer text-3xl hover:fill-white transition-all duration-200" />
+                    <FaGithub className="cursor-pointer text-3xl hover:fill-black/60 transition-all duration-200" />
                   </motion.a>
                   {proj.website && (
                     <a
                       href={proj.website}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-lg font-bold hover:text-white transition"
+                      className="text-lg font-bold hover:text-black/60 transition"
                     >
                       Visit website
                     </a>

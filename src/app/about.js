@@ -52,12 +52,6 @@ export function About() {
                                 {i !== about["a-propos"].length - 1 && <br />}
                             </span>
                         ))}
-
-                        {/* Je m&apos;appelle Enzo LE MOAL, d&eacute;veloppeur web en formation &agrave; la Web@cad&eacute;mie by Epitech.<br />
-                        Apr&egrave;s un baccalaur&eacute;at ( sp&eacute;cialit&eacute;s math&eacute;matiques et NSI ), j&apos;ai tent&eacute; une licence Math&eacute;matiques et Informatique,
-                        mais l&apos;approche ne me convenait pas.<br />
-                        Durant cette licence je me suis form&eacute; en autodidacte au d&eacute;veloppement web, apr&egrave;s
-                        2 ans en dans cette licence, j&apos;ai quitt&eacute; la fac pour rejoindre ma formation actuelle. */}
                     </motion.p>
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
@@ -127,7 +121,12 @@ export function About() {
                         }}
                         viewport={{ once: true, amount: 0.5 }}
                         className="w-full text-base sm:text-lg lg:text-3xl text-left leading-8 sm:leading-10 ">
-                        Je suis actuellement en 2 &egrave;me ann&eacute;e de mon dipl&ocirc;me bac+2 - D&eacute;veloppeur / Int&eacute;grateur web, et occupe un poste de d&eacute;veloppeur Back-end en alternance.
+                            {about["pro"].map((text, i) => (
+                            <span key={i}>
+                                {text}
+                                {i !== about["pro"].length - 1 && <br />}
+                            </span>
+                        ))}
                     </motion.p>
                 </div>
             </div>

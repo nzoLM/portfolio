@@ -25,6 +25,7 @@
 @font-face {
     font-family: 'fontWacks';
     src: url('FashionWacks-Regular.ttf');
+    font-display: swap; /*ajout de font-display:swap pour lighthouse*/
 }
 
 .fontWacks {
@@ -34,6 +35,7 @@
 @font-face {
     font-family: 'Analogist';
     src: url('Analogist.otf');
+    font-display: swap;
 }
 
 .analogist {
@@ -78,4 +80,17 @@ body {
 input,
 textarea {
     outline: none;
+}
+
+
+input:focus,
+textarea:focus {
+    outline: none;
+    outline-offset: none;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--color-foreground);
+    outline-offset: 4px;
 }
