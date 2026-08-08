@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from "motion/react";
 import { useState, useEffect } from 'react';
 import { DragonBallIcon } from '../components/DragonBallIcon';
 import { AccessibilityToggle } from '../components/AccessibilityToggle';
-import Link from 'next/link';
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

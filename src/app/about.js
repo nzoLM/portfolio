@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Star from "../../public/long1.svg";
 import Image from "next/image";
 import WhiteStar from "../../public/white-star.svg";

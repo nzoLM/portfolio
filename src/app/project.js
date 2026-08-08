@@ -1,9 +1,9 @@
 "use client";
-import { DiPhp, DiJavascript1 } from "react-icons/di";
+import { DiJavascript1 } from "react-icons/di";
 import {Fragment} from "react";
 import Star from "../../public/star-with-star-field.svg"
-import { RiTailwindCssFill, RiNextjsFill, RiNextjsLine, RiReactjsFill, RiSvelteFill } from "react-icons/ri";
-import { FaGithub, FaHtml5, FaCss3Alt, FaDocker, FaNode, FaSymfony } from "react-icons/fa";
+import { RiTailwindCssFill, RiNextjsFill, RiReactjsFill, RiSvelteFill } from "react-icons/ri";
+import { FaGithub, FaDocker, FaNode, FaSymfony } from "react-icons/fa";
 import Image from "next/image";
 import Stars from "../../public/stars.svg";
 import Ray2 from "../../public/ray2.svg";
@@ -121,6 +121,8 @@ export function Project() {
                       className="rounded-2xl max-h-72 w-auto object-contain"
                       src={`https://api.microlink.io/?url=${proj.website}&screenshot=true&meta=false&embed=screenshot.url`}
                       alt={`Aperçu de ${proj.title}`}
+                      width={1280}
+                      height={720}
                       loading="lazy"
                     />
                   </a>
