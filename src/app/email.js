@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { motion } from 'motion/react';
 
 export const ContactUs = () => {
   const form = useRef();
@@ -19,7 +20,7 @@ export const ContactUs = () => {
       console.error('Missing NEXT_PUBLIC_EMAILJS_PUBLIC_KEY at build/deploy time.');
       return;
     }
-    
+
     try {
       await emailjs.sendForm('service_84tu507', 'template_bm7aw9n', form.current, {
         publicKey,
@@ -76,12 +77,14 @@ export const ContactUs = () => {
       />
 
       {status && (
-        <p
-          className={`text-sm sm:text-base ${status.type === 'success' ? 'text-green-700' : 'text-red-700'
+        <motion.p
+          initial={{ opacity: 0, }}
+          animate={{ opacity: 1 }}
+          className={`m-auto rounded-lg w-fit p-4 text-sm sm:text-base ${status.type === 'success' ? 'bg-green-700' : 'bg-red-700'
             }`}
         >
           {status.message}
-        </p>
+        </motion.p>
       )}
     </form>
 

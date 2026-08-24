@@ -7,7 +7,7 @@ import { motion } from "motion/react";
 export function Contact() {
 
     return (
-        <div className="analogist overflow-x-hidden">
+        <div className="analogist overflow-x-hidden text-black">
             <div className="bg-linear-to-b to-transparent from-black h-20"></div>
 
             <div id="contact" className='flex flex-col lg:flex-row justify-center items-center min-h-screen '>

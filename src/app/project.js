@@ -1,9 +1,9 @@
 "use client";
-import { DiPhp, DiJavascript1 } from "react-icons/di";
-import React from "react";
+import { DiJavascript1 } from "react-icons/di";
+import {Fragment} from "react";
 import Star from "../../public/star-with-star-field.svg"
-import { RiTailwindCssFill, RiNextjsFill, RiNextjsLine, RiReactjsFill, RiSvelteFill } from "react-icons/ri";
-import { FaGithub, FaHtml5, FaCss3Alt, FaDocker, FaNode, FaSymfony } from "react-icons/fa";
+import { RiTailwindCssFill, RiNextjsFill, RiReactjsFill, RiSvelteFill } from "react-icons/ri";
+import { FaGithub, FaDocker, FaNode, FaSymfony } from "react-icons/fa";
 import Image from "next/image";
 import Stars from "../../public/stars.svg";
 import Ray2 from "../../public/ray2.svg";
@@ -37,19 +37,19 @@ const projectData = [
     image: EcommerceImg,
   },
   {
-    title: '"LavanVids" / Previously-on',
+    title: 'LavanVids',
     description: "Projet de groupe, 2 personnes, projet visant à suivre la progression sur les séries consultées. Ce remake est développé en Svelte, avec Tailwind CSS pour le design et en utilisant l'API de BetaSeries",
     icons: [<DiJavascript1 className="text-5xl" key="js" />, <RiTailwindCssFill className="text-5xl" key="tw" />, <RiSvelteFill className="text-5xl" key="svelte" />],
     github: "https://github.com/nzoLM/LavanVids",
     // website: "https://lavanvids.netlify.app",
-    image: LavanvidsImg, // Remplace par une image spécifique si besoin
+    image: LavanvidsImg, 
   },
   {
     title: 'my-crud-tester',
     description: "Projet solo\nProjet de réalisations de tests unitaires, projet scolaire",
     icons: [<DiJavascript1 className="text-5xl" key="js" />, <FaDocker className="text-5xl" key="Docker" ></FaDocker>],
     github: "https://github.com/nzoLM/my-crud-tester",
-    image: Stars, // Remplace par une image spécifique si besoin
+    image: Stars, 
   },
   {
     title: 'MyIRC',
@@ -75,7 +75,7 @@ const projectData = [
 
 export function Project() {
   return (
-    <div id="project" className="flex flex-col min-h-screen pb-10 gap-10 overflow-x-hidden">
+    <div id="project" className="flex flex-col min-h-screen pb-10 gap-10 overflow-x-hidden text-black">
       <div className="flex justify-around md:my-5 my-10">
         <motion.div initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -99,7 +99,7 @@ export function Project() {
       </div>
       <div className="flex flex-col justify-around">
         {projectData.map((proj, i) => (
-          <React.Fragment key={proj.title}>
+          <Fragment key={proj.title}>
             <div
               className={`flex flex-col items-center justify-around gap-10 w-full ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                 }`}
@@ -121,6 +121,8 @@ export function Project() {
                       className="rounded-2xl max-h-72 w-auto object-contain"
                       src={`https://api.microlink.io/?url=${proj.website}&screenshot=true&meta=false&embed=screenshot.url`}
                       alt={`Aperçu de ${proj.title}`}
+                      width={1280}
+                      height={720}
                       loading="lazy"
                     />
                   </a>
@@ -150,14 +152,14 @@ export function Project() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <FaGithub className="cursor-pointer text-3xl hover:fill-white transition-all duration-200" />
+                    <FaGithub className="cursor-pointer text-3xl hover:fill-black/60 transition-all duration-200" />
                   </motion.a>
                   {proj.website && (
                     <a
                       href={proj.website}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-lg font-bold hover:text-white transition"
+                      className="text-lg font-bold hover:text-black/60 transition"
                     >
                       Visit website
                     </a>
@@ -165,7 +167,6 @@ export function Project() {
                 </div>
               </motion.div>
             </div>
-            {/* Séparateur sauf après le dernier projet */}
             {(
               <div className={`py-10 from-transparent to-[#937881]`}>
                 <motion.div
@@ -178,7 +179,7 @@ export function Project() {
                 </motion.div>
               </div>
             )}
-          </React.Fragment>
+          </Fragment>
         ))}
       </div>
     </div>

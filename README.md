@@ -1,8 +1,6 @@
-# Portfolio - Enzo Le Moal
+# Portfolio — Enzo Le Moal
 
 Portfolio personnel développé avec [Next.js](https://nextjs.org), présentant mon parcours, mes compétences et mes projets en tant que développeur web.
-- URL du site : https://enzo-lemoal.fr
-- URL repository perso : https://github.com/nzoLM/portfolio
 
 ## Stack technique
 
