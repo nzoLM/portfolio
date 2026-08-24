@@ -1,71 +1,40 @@
-# Portfolio - Enzo Le Moal
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
-Portfolio personnel développé avec [Next.js](https://nextjs.org), présentant mon parcours, mes compétences et mes projets en tant que développeur web.
-- URL du site : https://enzo-lemoal.fr
-- URL repository perso : https://github.com/nzoLM/portfolio
+## Getting Started
 
-## Stack technique
-
-- [Next.js 15](https://nextjs.org) (React 19, App Router)
-- [Tailwind CSS 4](https://tailwindcss.com)
-- [Motion](https://motion.dev) pour les animations
-- [EmailJS](https://www.emailjs.com/) pour le formulaire de contact
-- [Vercel Analytics](https://vercel.com/analytics)
-
-## Prérequis
-
-- Node.js 18.18 ou supérieur
-- npm
-
-## Installation
-Se placer dans le dossier racine "/"
-
-```bash
-npm install
-```
-
-## Configuration
-
-Le formulaire de contact utilise EmailJS. Créez un fichier `.env` à la racine du projet avec la clé publique associée à votre compte EmailJS :
-
-```
-NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=votre_cle_publique
-```
-
-## Lancer le projet en développement
+First, run the development server:
 
 ```bash
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-Le site est ensuite accessible sur [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Scripts disponibles
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-| Commande        | Description                              |
-| --------------- | ----------------------------------------- |
-| `npm run dev`   | Démarre le serveur de développement       |
-| `npm run build` | Génère le build de production             |
-| `npm run start` | Démarre le serveur en mode production      |
-| `npm run lint`  | Analyse le code avec ESLint               |
+[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-## Structure du projet
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
 
-```
-src/
-├── app/            -> Pages et sections (Hero, About, Project, Contact, Technologies...)
-├── components/     -> Composants réutilisables (accessibilité, icônes, boutons...)
-├── data/           -> Contenus statiques (JSON)
-├── pages/          -> Fichiers Next.js spécifiques
-└── styles/         -> Polices et styles globaux
-public/
-├── files/          -> Fichiers téléchargeables (CV)
-└── pictures/       -> Images du site
-```
+This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Fonctionnalités
+## Learn More
 
-- Présentation et projets
-- Formulaire de contact fonctionnel (EmailJS)
-- Bascule d'accessibilité (police adaptée à la dyslexie et aux malvoyants)
-- Design responsive et animations fluides
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
